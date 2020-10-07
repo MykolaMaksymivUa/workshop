@@ -1,0 +1,8 @@
+.products-list__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.products-list___product {
+  width: 49%;
+  border: 1px solid #2c2c2c;
+}
