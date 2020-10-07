@@ -1,0 +1,13 @@
+<hr />
+<ul>
+  <li>Name: {{ product.name }}</li>
+  <li>
+    Product ID: <b>{{ product.productSKU }}</b>
+  </li>
+  <li>Description: {{ product.description }}</li>
+  <li>Price: {{ product.price | currency }}</li>
+  <li>Category: {{ product.categoryType }}</li>
+  <li>Available: {{ product.isAvailable }}</li>
+</ul>
+<button (click)="onAddToCart($event)">Add to cart</button>
+<hr />
