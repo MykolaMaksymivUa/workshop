@@ -11,7 +11,6 @@ export class CartEntryComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    debugger;
     console.log(this.cartEntry);
   }
 
