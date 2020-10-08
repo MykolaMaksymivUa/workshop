@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { ProductModel } from '../models';
 
 @Injectable({
-  providedIn: 'any'
+  providedIn: 'any' // почему any?
 })
 export class ProductsService {
 

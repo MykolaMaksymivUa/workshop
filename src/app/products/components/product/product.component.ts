@@ -10,6 +10,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ProductComponent implements OnInit {
   @Input() product: ProductModel;
 
+  // лучше сделать этот компонент презентационным, тоесть без зависимостей.
   constructor(
     private cartService: CartService,
   ) { }
