@@ -1,4 +1,5 @@
-<app-product
-  *ngFor="let product of productService.getProducts()"
-  [product]="product"
-></app-product>
+<mat-grid-list cols="4">
+  <mat-grid-tile *ngFor="let tile of productService.getProducts()">
+    <app-product [product]="tile"></app-product>
+  </mat-grid-tile>
+</mat-grid-list>

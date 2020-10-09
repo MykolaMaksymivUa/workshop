@@ -14,7 +14,7 @@ export class CartService {
     if (!existInCart) {
       this.cartEntries.push(entry);
     }
-    //if else -> change product quantity
+    // if else -> change product quantity
   }
 
   getCartEntries() {
