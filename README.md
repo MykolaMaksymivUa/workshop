@@ -1,4 +1,4 @@
 # Workshop
 ------------------------ 09/10/2020------------------------
 
-## Added Angular Material, finished all points from TASK 1, fixed linter.
+#### Added Angular Material, finished all points from TASK 1, fixed linter.
