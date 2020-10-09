@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.app-color--primary {
+  color: #6200EE;
+}
+
+.app-color--success {
+  color: #03DAC6;
+}
+.app-color--error {
+  color: #b00020;
+}
+
+.app-text--bold {
+  font-weight: bold;
+}

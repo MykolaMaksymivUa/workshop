@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cart-list.component.css']
 })
 export class CartListComponent implements OnInit {
-  //Change to CartEntryModel
+  // Change to CartEntryModel
   cartEntries: ProductModel[];
 
   constructor(

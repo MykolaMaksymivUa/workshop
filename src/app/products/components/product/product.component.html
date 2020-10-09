@@ -1,13 +1,34 @@
-<hr />
-<ul>
-  <li>Name: {{ product.name }}</li>
-  <li>
-    Product ID: <b>{{ product.productSKU }}</b>
-  </li>
-  <li>Description: {{ product.description }}</li>
-  <li>Price: {{ product.price | currency }}</li>
-  <li>Category: {{ product.categoryType }}</li>
-  <li>Available: {{ product.isAvailable }}</li>
-</ul>
-<button (click)="onAddToCart($event)">Add to cart</button>
-<hr />
+<mat-card class="product-tile">
+  <mat-card-header>
+    <mat-card-title>{{ product.name }}</mat-card-title>
+    <mat-card-subtitle>{{ product.categoryType }}</mat-card-subtitle>
+  </mat-card-header>
+  <img
+    mat-card-image
+    class="product-tile__image"
+    src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+    alt="Photo of a Shiba Inu"
+  />
+  <mat-card-content>
+    <div>#{{ product.productSKU }}</div>
+    <p>
+      Availability:
+      <span
+        *ngIf="product.isAvailable; else elseBlock"
+        class="app-color--success app-text--bold"
+        >In Stock</span
+      >
+      <ng-template #elseBlock>
+        <span class="app-color--error app-text--bold">Out of Stock</span>
+      </ng-template>
+    </p>
+
+    <p>{{ product.description }}</p>
+    <p class="product-tile__price app-text--bold">
+      {{ product.price | currency }}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button (click)="onAddToCart($event)">Add to cart</button>
+  </mat-card-actions>
+</mat-card>
