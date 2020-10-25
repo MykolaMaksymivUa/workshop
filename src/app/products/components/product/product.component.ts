@@ -1,25 +1,27 @@
-import { CartService } from './../../../cart/services/cart.service';
+import { CartEntryModel } from './../../../cart/models/cart-entry.model';
 import { ProductModel } from './../../models/product.model';
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
-  styleUrls: ['./product.component.css']
+  styleUrls: ['./product.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProductComponent implements OnInit {
   @Input() product: ProductModel;
+  @Output() addToCart = new EventEmitter<CartEntryModel>();
 
   constructor(
-    private cartService: CartService,
-  ) { }
+  ) {
+  }
 
   ngOnInit(): void {
   }
 
-  onAddToCart(e) {
+  onAddToCart(qty: number) {
     console.log(`${this.product.name} successfully added to your cart!`);
-    this.cartService.addToCart(this.product);
+    this.addToCart.emit({ quantity: qty, ...this.product });
   }
 
 }

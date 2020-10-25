@@ -1,8 +1,18 @@
-<ng-container *ngIf="cartEntries.length; else emptyCart">
-  <app-cart-entry
-    *ngFor="let product of cartEntries"
-    [cartEntry]="product"
-  ></app-cart-entry>
+<ng-container *ngIf="!cartService.isEmptyCart(); else emptyCart">
+  <div class="cart-list__wrapper">
+    <div class="cart-list__entries-block">
+      <app-cart-entry
+        *ngFor="let product of cartEntries"
+        appHighlight="red"
+        [cartEntry]="product"
+        (updateQuantity)="onUpdateQuantity($event)"
+        (cartEntryDelete)="onCartEntryDelete($event)"
+      ></app-cart-entry>
+    </div>
+    <div class="cart-list__order-summary">
+      <b>ORDER TOTAL: {{ cartService.orderTotal | currency }}</b>
+    </div>
+  </div>
 </ng-container>
 
 <ng-template #emptyCart><h3>Your shopping cart is empty</h3></ng-template>

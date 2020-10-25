@@ -3,7 +3,8 @@ export class ProductModel {
     public productSKU: string,
     public name: string,
     public description: string,
-    public price?: number,
+    public price: number,
+    public imageSrc?: string,
     public categoryType?: string,
     public isAvailable?: boolean,
   ) {

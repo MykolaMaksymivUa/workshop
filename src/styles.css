@@ -17,3 +17,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .app-text--bold {
   font-weight: bold;
 }
+
+.app-border--dotted {
+  border: 1px dotted;
+}

@@ -1,3 +1,8 @@
-<h2>Product Listing Page</h2>
-<a [routerLink]="['/cart']">Go to shopping cart</a>
+<div class="d-flex justify-content-between">
+  <h2>Product Listing Page</h2>
+
+  <button mat-raised-button [routerLink]="['/cart']" color="primary">
+    Go to shopping cart
+  </button>
+</div>
 <app-product-list></app-product-list>

@@ -1,5 +1,9 @@
+import { CartEntryModel } from './../../../cart/models/cart-entry.model';
 import { Component, OnInit } from '@angular/core';
-import { ProductsService } from '../../services/products.service';
+
+import { ProductsService } from '../../services';
+import { ProductModel } from '../../models';
+import { CartService } from './../../../cart/services/cart.service';
 
 @Component({
   selector: 'app-product-list',
@@ -7,12 +11,20 @@ import { ProductsService } from '../../services/products.service';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
+  products: ProductModel[];
 
   constructor(
-    public productService: ProductsService,
-  ) { }
+    private productService: ProductsService,
+    private cartService: CartService
+  ) {
+    this.products = productService.getProducts();
+  }
 
   ngOnInit(): void {
+  }
+
+  onAddToCart(product: CartEntryModel) {
+    this.cartService.addToCart(product);
   }
 
 }

@@ -1,0 +1,14 @@
+.cart-list__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-list__wrapper .cart-list__entries-block {
+  width: 50%;
+}
+
+.cart-list__wrapper .cart-list__order-summary {
+  width: 30%;
+  border: 1px solid black;
+  height: 560px;
+}

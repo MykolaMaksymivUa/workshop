@@ -6,6 +6,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatExpansionModule } from '@angular/material/expansion';
+
 
 const materialModules = [
   MatGridListModule,
@@ -13,6 +15,7 @@ const materialModules = [
   MatIconModule,
   MatButtonModule,
   MatInputModule,
+  MatExpansionModule,
 ];
 
 @NgModule({

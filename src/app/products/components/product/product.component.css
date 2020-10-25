@@ -2,11 +2,11 @@
   font-size: 1.25rem;
 }
 mat-card.product-tile{
-  max-height: 560px;
+  height: 460px;
   margin: 10px;
 }
 mat-card .product-tile__image {
-  max-height: 160px;
+  height: 160px;
   width: 80%;
   display: block;
   margin-right: auto;

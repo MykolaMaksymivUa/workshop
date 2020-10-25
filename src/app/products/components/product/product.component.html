@@ -6,8 +6,8 @@
   <img
     mat-card-image
     class="product-tile__image"
-    src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-    alt="Photo of a Shiba Inu"
+    [src]="product.imageSrc"
+    alt="Product Image"
   />
   <mat-card-content>
     <div>#{{ product.productSKU }}</div>
@@ -29,6 +29,19 @@
     </p>
   </mat-card-content>
   <mat-card-actions>
-    <button (click)="onAddToCart($event)">Add to cart</button>
+    <input
+      type="number"
+      #productQty
+      min="1"
+      value="1"
+      [disabled]="!product.isAvailable"
+    />
+
+    <button
+      (click)="onAddToCart(+productQty.value)"
+      [disabled]="!product.isAvailable"
+    >
+      Add to cart
+    </button>
   </mat-card-actions>
 </mat-card>

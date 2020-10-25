@@ -1,11 +1,39 @@
-<hr />
-<ul>
-  <li>Name: {{ cartEntry.name }}</li>
-  <li>
-    Product ID: <b>{{ cartEntry.productSKU }}</b>
-  </li>
-  <li>Price: {{ cartEntry.price | currency }}</li>
-  <li>Category: {{ cartEntry.categoryType }}</li>
-  <li>Quantity:</li>
-</ul>
-<hr />
+<mat-accordion>
+  <mat-expansion-panel appHighlight="yellow">
+    <mat-expansion-panel-header>
+      <mat-panel-title> {{ cartEntry.name }} </mat-panel-title>
+    </mat-expansion-panel-header>
+    <p>
+      <b>#{{ cartEntry.productSKU }}</b>
+    </p>
+    <form class="cart__quantity-form">
+      <mat-form-field class="cart__quantity-form-full-width">
+        <input
+          matInput
+          type="number"
+          #entryQty
+          min="0"
+          [value]="cartEntry.quantity"
+        />
+      </mat-form-field>
+      <button
+        mat-raised-button
+        color="primary"
+        type="button"
+        (click)="onUpdateQuantity(cartEntry.productSKU, +entryQty.value)"
+      >
+        Save
+      </button>
+    </form>
+    <p>Total Price: {{ cartEntry.totalPrice | currency }}</p>
+
+    <button
+      mat-raised-button
+      color="warn"
+      type="button"
+      (click)="onCartEntryDelete(cartEntry.productSKU)"
+    >
+      Delete from cart
+    </button>
+  </mat-expansion-panel>
+</mat-accordion>
