@@ -17,10 +17,10 @@ export class ProductListComponent implements OnInit {
     private productService: ProductsService,
     private cartService: CartService
   ) {
-    this.products = productService.getProducts();
   }
 
   ngOnInit(): void {
+    this.products = this.productService.getProducts();
   }
 
   onAddToCart(product: CartEntryModel) {

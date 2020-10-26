@@ -22,7 +22,8 @@ const materialModules = [
   declarations: [],
   imports: [
     CommonModule,
-    ...materialModules
+    // Необязательно сюда импортировать, если тут нет компонент, которые используют эти модули
+    // ...materialModules
   ],
   exports: [
     ...materialModules

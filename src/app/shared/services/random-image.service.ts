@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'any'
+  providedIn: 'any' // почему any?
 })
 export class RandomImageService {
   constructor() { }

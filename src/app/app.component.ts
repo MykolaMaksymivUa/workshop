@@ -12,6 +12,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
+    // теперь вы знаете, что тут можно использовать Renderer2
     this.appTitle.nativeElement.innerText = 'Angular Workshop';
   }
 }
