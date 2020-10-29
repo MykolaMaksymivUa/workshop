@@ -14,7 +14,7 @@
 ##### Added random image service for image generating
 ##### Fixed TSLint
 ##### Minor improvements
-##### FINISHED ALL TASKS FROM 'TASK 2.Components' section
+##### FINISHED ALL TASKS FROM TASK 2.Components section
 -------------------------------------------------------------------------------------------------------------------------------
 
 -------------------------------------------------------------------------------------------------------------------------------
@@ -22,5 +22,5 @@
 
 ##### Added all services from task, implemented directive with Renderer2, imported all functionality into First Component
 ##### Fixed routing, added separate path for First Component
-##### FINISHED ALL TASKS FROM 'TASK 2.Components' section
+##### FINISHED ALL TASKS FROM TASK 3.Services section
 -------------------------------------------------------------------------------------------------------------------------------
