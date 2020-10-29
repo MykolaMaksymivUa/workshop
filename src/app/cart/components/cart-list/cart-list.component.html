@@ -1,6 +1,27 @@
 <ng-container *ngIf="!cartService.isEmptyCart(); else emptyCart">
   <div class="cart-list__wrapper">
     <div class="cart-list__entries-block">
+      <div class="cart-list__actions">
+        <p>
+          You have:
+          <b>
+            {{
+              cartService.totalQuantity === 1
+                ? cartService.totalQuantity + " product"
+                : cartService.totalQuantity + " products"
+            }}
+          </b>
+          in cart
+        </p>
+        <button
+          type="reset"
+          mat-raised-button
+          color="warn"
+          (click)="cartService.removeAllProducts()"
+        >
+          Clear cart
+        </button>
+      </div>
       <app-cart-entry
         *ngFor="let product of cartEntries"
         appHighlight="red"

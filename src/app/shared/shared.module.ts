@@ -1,17 +1,18 @@
 import { MaterialModule } from './material/material.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HighlightDirective } from './directives';
+import { HighlightDirective, ClickBoldTextDirective } from './directives';
 
 @NgModule({
-  declarations: [HighlightDirective],
+  declarations: [HighlightDirective, ClickBoldTextDirective],
   imports: [
     CommonModule,
     MaterialModule,
   ],
   exports: [
     MaterialModule,
-    HighlightDirective
+    HighlightDirective,
+    ClickBoldTextDirective
   ]
 })
 export class SharedModule { }

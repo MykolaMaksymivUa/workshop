@@ -1,32 +1,50 @@
-import { Injectable } from '@angular/core';
+import { Constants, CONSTANT_CONFIG } from './../../core/shared/constant.config';
+import { Inject, Injectable } from '@angular/core';
 import { CartEntryModel } from './../models/cart-entry.model';
+import { LocalStorageService } from './../../core/services';
+
 
 @Injectable({
   providedIn: 'any'
 })
 export class CartService {
   private _orderTotal = 0;
-  private SESSION_ID = 'cartEntries';
-  private _cartEntries: CartEntryModel[] = JSON.parse(localStorage.getItem(this.SESSION_ID)) || [];
+  private _totalQuantity = 0;
+  private _cartEntries: CartEntryModel[] = this.storage.getItem(this.constList.cartEntriesStorageKey) || [];
 
-  constructor() { }
+  constructor(
+    @Inject(CONSTANT_CONFIG) private constList: Constants,
+    private storage: LocalStorageService
+  ) {
+    this.updateCartData();
+  }
 
   get cartEntries() {
     return this._cartEntries;
   }
 
-  get orderTotal() {
-    this.calculateOrderTotal();
-
+  get orderTotal(): number {
     return this._orderTotal;
   }
 
-  private saveToSession() {
-    localStorage.setItem(this.SESSION_ID, JSON.stringify(this._cartEntries));
+  get totalQuantity(): number {
+    return this._totalQuantity;
   }
 
-  private calculateOrderTotal() {
-    this._orderTotal = this._cartEntries.reduce((acc: number, entry: CartEntryModel) => acc + entry.totalPrice, 0);
+  private updateCartData() {
+    this._orderTotal = 0;
+    this._totalQuantity = 0;
+
+    this._cartEntries.forEach((entry: CartEntryModel) => {
+      this._totalQuantity += entry.quantity;
+      this._orderTotal += entry.totalPrice;
+    });
+
+    this.saveToSession();
+  }
+
+  private saveToSession() {
+    this.storage.setItem(this.constList.cartEntriesStorageKey, this._cartEntries);
   }
 
   private getEntryIndex(id: string): number {
@@ -52,7 +70,7 @@ export class CartService {
       this._cartEntries.push(product);
     }
 
-    this.saveToSession();
+    this.updateCartData();
   }
 
   updateEntryQuantity(entryID: string, newQTY: number) {
@@ -63,7 +81,7 @@ export class CartService {
       updatedEntry.quantity = newQTY;
       updatedEntry.totalPrice = newQTY * updatedEntry.price;
 
-      this.saveToSession();
+      this.updateCartData();
     }
 
   }
@@ -71,6 +89,11 @@ export class CartService {
   deleteEntry(entryID: string) {
     this._cartEntries.splice(this.getEntryIndex(entryID), 1);
 
-    this.saveToSession();
+    this.updateCartData();
+  }
+
+  removeAllProducts() {
+    this._cartEntries.length = 0;
+    this.updateCartData();
   }
 }

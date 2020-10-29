@@ -1,0 +1,16 @@
+<h2>First component for testing some angular features.</h2>
+<a href="#" [routerLink]="['/']">Back to home</a>
+<ul>
+  <li>Name: {{ name }}</li>
+  <li>Description: {{ description }}</li>
+  <li>Price: {{ price }}</li>
+  <li>Category: {{ categoryList[categoryType] }}</li>
+  <li>Available: {{ isAvailable }}</li>
+</ul>
+
+<h3>SERVICE SECTION</h3>
+<p>config value: {{ configService.getConfig() | json }}</p>
+<p>random 10 words: {{ gFactory10 }}</p>
+<p>Cart endpoint {{ constList.cartEntriesEndpoint }}</p>
+
+<button appClickBoldText="22">DIRECTIVE CLICK ME></button>
