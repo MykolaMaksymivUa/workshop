@@ -1,71 +1,19 @@
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
+
 import { ProductModel } from '../models';
-import { RandomImageService } from './../../shared/services';
+import { productMockList } from './product-list';
+
 
 @Injectable({
   providedIn: 'any'
 })
 export class ProductsService {
+  products$: Observable<ProductModel[]> = of(productMockList);
 
-  constructor(private imageService: RandomImageService) { }
+  constructor() { }
 
-  getProducts(): ProductModel[] {
-    return [
-      new ProductModel(
-        '12344_1',
-        'Perfect Empowered Drinking Water',
-        'A refreshing drinking water infused with MBO®*, a proprietary process that stabilizes oxygen in the water.',
-        48,
-        this.imageService.generateRandomImage(),
-        'Sport',
-        true
-      ),
-      new ProductModel(
-        '12523', 'Artistry Studio™ Glittering Body Jelly',
-        'Artistry Studio™ Glittering Body Jelly feels cool and refreshing to your skin on contact.',
-        13.80,
-        this.imageService.generateRandomImage(),
-        'Body Key',
-        true,
-      ),
-      new ProductModel(
-        '12344_2',
-        'Perfect Empowered Drinking Water',
-        'A refreshing drinking water infused with MBO®*, a proprietary process that stabilizes oxygen in the water.',
-        48,
-        this.imageService.generateRandomImage(),
-        'Sport',
-        true
-      ),
-      new ProductModel('16544_1', 'Artistry Studio™ Glittering Body Jelly',
-        'Artistry Studio™ Glittering Body Jelly feels cool and refreshing to your skin on contact. .',
-        233.34),
-      new ProductModel(
-        '12344_1',
-        'Perfect Empowered Drinking Water',
-        'A refreshing drinking water infused with MBO®*, a proprietary process that stabilizes oxygen in the water.',
-        48,
-        this.imageService.generateRandomImage(),
-        'Sport',
-        true
-      ),
-      new ProductModel(
-        '12523', 'Artistry Studio™ Glittering Body Jelly',
-        'Artistry Studio™ Glittering Body Jelly feels cool and refreshing to your skin on contact.',
-        13.80),
-      new ProductModel(
-        '12344_2',
-        'Perfect Empowered Drinking Water',
-        'A refreshing drinking water infused with MBO®*, a proprietary process that stabilizes oxygen in the water.',
-        48,
-        this.imageService.generateRandomImage(),
-        'Sport',
-        true
-      ),
-      new ProductModel('16544_1', 'Artistry Studio™ Glittering Body Jelly',
-        'Artistry Studio™ Glittering Body Jelly feels cool and refreshing to your skin on contact. .',
-        13.80,
-        this.imageService.generateRandomImage())
-    ];
+  getProducts(): Observable<ProductModel[]> {
+    return this.products$;
   }
 }

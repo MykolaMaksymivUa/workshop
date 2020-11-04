@@ -24,3 +24,13 @@
 ##### Fixed routing, added separate path for First Component
 ##### FINISHED ALL TASKS FROM TASK 3.Services section
 -------------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------------
+#### 03/11/2020
+
+##### Added async pipe for response from productsService
+##### currency pipe implemented in all places, where you can meet price
+##### Added orderBy pipe, implemented functionality for sorting on cart page
+##### Added common module into shared module export
+##### FINISHED ALL points FROM TASK 4.Pipes section
+-------------------------------------------------------------------------------------------------------------------------------

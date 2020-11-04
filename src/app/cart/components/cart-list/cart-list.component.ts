@@ -1,6 +1,7 @@
-import { ProductModel } from 'src/app/products/models';
 import { CartService } from './../../services/cart.service';
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { CartEntryModel } from '../../models';
+
 
 @Component({
   selector: 'app-cart-list',
@@ -8,7 +9,16 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
   styleUrls: ['./cart-list.component.css']
 })
 export class CartListComponent implements OnInit {
-  cartEntries: ProductModel[];
+  cartEntries: CartEntryModel[];
+
+  // @todo move to separate component
+  sortingFields = {
+    price: 'Price',
+    totalPrice: 'Total Price',
+    name: 'Name',
+    quantity: 'Quantity',
+  };
+  selectedSortField: string = this.sortingFields.price;
 
   constructor(
     public cartService: CartService,

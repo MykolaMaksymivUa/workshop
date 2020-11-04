@@ -1,5 +1,5 @@
 <mat-grid-list cols="4" rowHeight="520px">
-  <mat-grid-tile *ngFor="let tile of products">
+  <mat-grid-tile *ngFor="let tile of productService.getProducts() | async">
     <app-product
       [product]="tile"
       (addToCart)="onAddToCart($event)"

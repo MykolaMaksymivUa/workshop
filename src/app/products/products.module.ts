@@ -14,7 +14,6 @@ import { ProductsComponent } from './products.component';
     ProductComponent
   ],
   imports: [
-    CommonModule,
     SharedModule,
     RouterModule
   ],

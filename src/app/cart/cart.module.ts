@@ -16,7 +16,6 @@ import { SharedModule } from './../shared/shared.module';
     CartEntryComponent
   ],
   imports: [
-    CommonModule,
     RouterModule,
     SharedModule,
     CoreModule,

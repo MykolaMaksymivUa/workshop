@@ -22,9 +22,26 @@
           Clear cart
         </button>
       </div>
+
+      <mat-form-field>
+        <mat-label>Sort by</mat-label>
+        <mat-select [(value)]="selectedSortField">
+          <mat-option
+            *ngFor="let field of sortingFields | keyvalue"
+            [value]="field.key"
+            >{{ field.value }}</mat-option
+          >
+        </mat-select>
+      </mat-form-field>
+      <mat-checkbox #ascendingSortingCheckbox style="margin-left: 10px"
+        >Sort by ascending</mat-checkbox
+      >
+
       <app-cart-entry
-        *ngFor="let product of cartEntries"
-        appHighlight="red"
+        *ngFor="
+          let product of cartEntries
+            | orderBy: selectedSortField:!ascendingSortingCheckbox.checked
+        "
         [cartEntry]="product"
         (updateQuantity)="onUpdateQuantity($event)"
         (cartEntryDelete)="onCartEntryDelete($event)"
