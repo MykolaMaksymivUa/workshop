@@ -26,6 +26,7 @@
       <mat-form-field>
         <mat-label>Sort by</mat-label>
         <mat-select [(value)]="selectedSortField">
+          <!-- Ок, но если организовать данные в виде массива пар, то не придеться использовать пайп -->
           <mat-option
             *ngFor="let field of sortingFields | keyvalue"
             [value]="field.key"
