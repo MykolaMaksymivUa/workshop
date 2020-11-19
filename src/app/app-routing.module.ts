@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CartComponent } from './cart/cart.component';
 import { PathNotFoundComponent, FirstComponentComponent } from './core/components';
 import { ProductsComponent } from './products/products.component';
 
@@ -8,16 +7,20 @@ import { ProductsComponent } from './products/products.component';
 const routes: Routes = [
   {
     path: '',
-    component: ProductsComponent,
+    pathMatch: 'full',
+    redirectTo: 'product-list'
   },
-  {
-    path: 'cart',
-    // loadChildren: () => CartModule,
-    component: CartComponent
-  },
+  // {
+  //   path: 'cart',
+  //   // loadChildren: () => CartModule,
+  //   component: CartComponent
+  // },
   {
     path: 'test-page',
     component: FirstComponentComponent,
+    data: {
+      title: 'Test Page'
+    }
   },
   {
     path: '**',

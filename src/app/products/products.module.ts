@@ -1,21 +1,22 @@
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 import { SharedModule } from './../shared/shared.module';
-import { ProductListComponent } from './components/product-list/product-list.component';
-import { ProductComponent } from './components/product/product.component';
+import { ProductListComponent, ProductDetailsComponent, ProductComponent } from './components';
 import { ProductsComponent } from './products.component';
+import { ProductsRoutingModule } from './products-routing.module';
 
 @NgModule({
   declarations: [
     ProductsComponent,
     ProductListComponent,
+    ProductDetailsComponent,
     ProductComponent
   ],
   imports: [
     SharedModule,
-    RouterModule
+    RouterModule,
+    ProductsRoutingModule,
   ],
 })
 export class ProductsModule { }

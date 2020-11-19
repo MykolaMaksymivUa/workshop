@@ -9,6 +9,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatSelectModule } from '@angular/material/select';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatTableModule } from '@angular/material/table';
+
 
 const materialModules = [
   MatGridListModule,
@@ -19,6 +21,7 @@ const materialModules = [
   MatExpansionModule,
   MatSelectModule,
   MatCheckboxModule,
+  MatTableModule,
 ];
 
 @NgModule({

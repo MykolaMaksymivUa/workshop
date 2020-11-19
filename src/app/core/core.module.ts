@@ -1,10 +1,10 @@
-import { SharedModule } from './../shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { constantsList, CONSTANT_CONFIG } from './shared/constant.config';
 
-import { PathNotFoundComponent, FirstComponentComponent } from './components';
+import { SharedModule } from './../shared/shared.module';
+import { constantsList, CONSTANT_CONFIG } from './shared/constant.config';
+import { PathNotFoundComponent, FirstComponentComponent, HeaderComponent } from './components';
 import { Config, configToken } from './shared/config.token';
 
 const configValue: Config = {
@@ -17,6 +17,7 @@ const configValue: Config = {
   declarations: [
     FirstComponentComponent,
     PathNotFoundComponent,
+    HeaderComponent,
   ],
   imports: [
     CommonModule,
@@ -26,6 +27,9 @@ const configValue: Config = {
   providers: [
     { provide: configToken, useValue: configValue },
     { provide: CONSTANT_CONFIG, useValue: constantsList },
+  ],
+  exports: [
+    HeaderComponent,
   ]
 })
 export class CoreModule { }

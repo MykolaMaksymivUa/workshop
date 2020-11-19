@@ -1,0 +1,86 @@
+<section class="mb-5">
+  <div class="row">
+    <div class="col-md-6 mb-4 mb-md-0 d-flex justify-content-center">
+      <a [href]="product.imageSrc" data-size="710x823">
+        <img
+          [src]="product.imageSrc"
+          class="img-fluid z-depth-1"
+          width="710px"
+        />
+      </a>
+    </div>
+    <div class="col-md-6">
+      <h3>{{ product.name }}</h3>
+      <p class="mb-2 text-muted text-uppercase small">
+        {{ product.categoryType }}
+      </p>
+      <!-- <ul class="rating">
+        <li>
+          <i class="fas fa-star fa-sm text-primary"></i>
+        </li>
+        <li>
+          <i class="fas fa-star fa-sm text-primary"></i>
+        </li>
+        <li>
+          <i class="fas fa-star fa-sm text-primary"></i>
+        </li>
+        <li>
+          <i class="fas fa-star fa-sm text-primary"></i>
+        </li>
+        <li>
+          <i class="far fa-star fa-sm text-primary"></i>
+        </li>
+      </ul> -->
+      <p>
+        <span class="mr-1"
+          ><strong>{{ product.price | currency }}</strong></span
+        >
+      </p>
+
+      <p>
+        Availability:
+        <span
+          *ngIf="product.isAvailable; else elseBlock"
+          class="app-color--success app-text--bold"
+          >In Stock</span
+        >
+        <ng-template #elseBlock>
+          <span class="app-color--error app-text--bold">Out of Stock</span>
+        </ng-template>
+      </p>
+
+      <p class="pt-1">
+        {{ product.description }}
+      </p>
+      <hr />
+
+      <div class="d-flex">
+        <input
+          class="form-control col-3"
+          #productQty
+          min="1"
+          name="quantity"
+          value="1"
+          type="number"
+          [disabled]="!product.isAvailable"
+        />
+        <button
+          type="button"
+          class="btn btn-primary btn-md mr-1 mb-2"
+          (click)="onAddToCart(+productQty.value)"
+          [disabled]="!product.isAvailable"
+        >
+          Add to cart
+        </button>
+
+        <button
+          type="button"
+          class="btn btn-secondary btn-md mr-1 mb-2"
+          routerLink="/cart"
+        >
+          Go to Cart Page
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

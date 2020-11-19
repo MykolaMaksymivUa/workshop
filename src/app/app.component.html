@@ -1,5 +1,8 @@
-<h1 #appTitle class="app-header app-text--bold"></h1>
-<a href="#" [routerLink]="['/test-page']">Go to test Page</a>
+<app-header></app-header>
+
 <div class="page-wrapper">
-  <router-outlet></router-outlet>
+  <router-outlet
+    #routerOutlet="outlet"
+    (activate)="onActivate($event, routerOutlet)"
+  ></router-outlet>
 </div>

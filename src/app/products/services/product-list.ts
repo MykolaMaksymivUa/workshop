@@ -34,7 +34,7 @@ export const productMockList: ProductModel[] = [
     'Artistry Studio™ Glittering Body Jelly feels cool and refreshing to your skin on contact. .',
     233.34),
   new ProductModel(
-    '12344_1',
+    '12344_3',
     'Perfect Empowered Drinking Water',
     'A refreshing drinking water infused with MBO®*, a proprietary process that stabilizes oxygen in the water.',
     48,

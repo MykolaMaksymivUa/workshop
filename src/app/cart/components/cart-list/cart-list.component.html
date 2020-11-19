@@ -49,6 +49,15 @@
     </div>
     <div class="cart-list__order-summary">
       <b>ORDER TOTAL: {{ cartService.orderTotal | currency }}</b>
+      <br />
+      <button
+        type="submit"
+        mat-raised-button
+        color="accent"
+        routerLink="/checkout"
+      >
+        Go to checkout
+      </button>
     </div>
   </div>
 </ng-container>

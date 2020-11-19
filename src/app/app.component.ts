@@ -1,17 +1,22 @@
-import { Component, ElementRef, ViewChild, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit, AfterViewInit {
-  @ViewChild('appTitle') appTitle: ElementRef<HTMLBaseElement>;
+export class AppComponent implements OnInit {
+  constructor(
+    private titleService: Title,
+  ) {
 
+  }
   ngOnInit(): void {
   }
 
-  ngAfterViewInit(): void {
-    this.appTitle.nativeElement.innerText = 'Angular Workshop';
+  onActivate(event: any, routerOutlet: RouterOutlet): void {
+    this.titleService.setTitle(routerOutlet.activatedRouteData.title);
   }
 }
