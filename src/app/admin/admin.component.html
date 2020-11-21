@@ -1,0 +1,19 @@
+<h3>Admin</h3>
+<nav>
+  <ul class="nav nav-tabs justify-content-center">
+    <li
+      class="nav-item"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <a class="nav-link" routerLink="./">Dashboard</a>
+    </li>
+    <li routerLinkActive="active">
+      <a class="nav-link" routerLink="./products">Manage Products</a>
+    </li>
+    <li class="nav-item" routerLinkActive="active">
+      <a class="nav-link" routerLink="./orders">Manage Orders</a>
+    </li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>

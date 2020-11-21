@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { RouterOutlet } from '@angular/router';
 
+import { SpinnerService } from './core/widgets';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,6 +12,7 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent implements OnInit {
   constructor(
     private titleService: Title,
+    public spinner: SpinnerService
   ) {
 
   }

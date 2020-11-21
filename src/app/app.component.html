@@ -1,5 +1,6 @@
 <app-header></app-header>
 
+<app-spinner *ngIf="spinner.isVisible()"></app-spinner>
 <div class="page-wrapper">
   <router-outlet
     #routerOutlet="outlet"

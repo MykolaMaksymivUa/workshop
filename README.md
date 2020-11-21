@@ -34,3 +34,13 @@
 ##### Added common module into shared module export
 ##### FINISHED ALL points FROM TASK 4.Pipes section
 -------------------------------------------------------------------------------------------------------------------------------
+#### 21/11/2020
+
+##### Migrated to bootstrap 4 + Angular Material
+##### Added orders module with checkout page and order history
+##### Added product details page when clicking on product at product list page
+##### Implemented login and auth guard
+##### Added admin module with dashboard, manage orders and manage products page. Also added possibility
+##### to edit product(not at all implemented) and add new one
+##### FINISHED ALL points FROM TASK 5.Routing section
+-------------------------------------------------------------------------------------------------------------------------------

@@ -19,7 +19,6 @@ export class OrderHistoryComponent implements OnInit {
   constructor(public ordersService: OrdersService) { }
 
   ngOnInit(): void {
-    console.log(this.ordersService.getOrderList());
   }
 
 }

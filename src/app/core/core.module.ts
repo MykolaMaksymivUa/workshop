@@ -4,8 +4,9 @@ import { CommonModule } from '@angular/common';
 
 import { SharedModule } from './../shared/shared.module';
 import { constantsList, CONSTANT_CONFIG } from './shared/constant.config';
-import { PathNotFoundComponent, FirstComponentComponent, HeaderComponent } from './components';
+import { PathNotFoundComponent, FirstComponentComponent, HeaderComponent, LoginComponent } from './components';
 import { Config, configToken } from './shared/config.token';
+import { SpinnerComponent } from './widgets';
 
 const configValue: Config = {
   id: '2132131',
@@ -18,6 +19,8 @@ const configValue: Config = {
     FirstComponentComponent,
     PathNotFoundComponent,
     HeaderComponent,
+    SpinnerComponent,
+    LoginComponent,
   ],
   imports: [
     CommonModule,
@@ -30,6 +33,7 @@ const configValue: Config = {
   ],
   exports: [
     HeaderComponent,
+    SpinnerComponent,
   ]
 })
 export class CoreModule { }

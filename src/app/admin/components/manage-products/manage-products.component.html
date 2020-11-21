@@ -1,0 +1,21 @@
+<div class="container py-4">
+  <div class="row justify-content-center">
+    <button mat-raised-button color="primary" routerLink="./add" class="mb-2">
+      Add Product
+    </button>
+  </div>
+  <div class="row justify-content-center">
+    <div class="list-group w-75">
+      <h3>Edit products from list</h3>
+      <a
+        class="list-group-item list-group-item-action"
+        *ngFor="let product of productsService.getProducts() | async"
+        [routerLink]="['./edit/' + product.productSKU]"
+      >
+        {{ product.name }}
+      </a>
+    </div>
+  </div>
+</div>
+<hr />
+<router-outlet></router-outlet>

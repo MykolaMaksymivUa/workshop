@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PathNotFoundComponent, FirstComponentComponent } from './core/components';
-import { ProductsComponent } from './products/products.component';
+import { PathNotFoundComponent, FirstComponentComponent, LoginComponent } from './core/components';
+import { AuthGuard } from './core/guards';
 
 
 const routes: Routes = [
@@ -10,11 +10,19 @@ const routes: Routes = [
     pathMatch: 'full',
     redirectTo: 'product-list'
   },
-  // {
-  //   path: 'cart',
-  //   // loadChildren: () => CartModule,
-  //   component: CartComponent
-  // },
+  {
+    path: 'login',
+    component: LoginComponent,
+    data: {
+      title: 'Login Page'
+    }
+  },
+  {
+    path: 'admin',
+    canLoad: [AuthGuard],
+    loadChildren: () => import('./admin/admin.module').then((m) => m.AdminModule),
+    data: { title: 'Admin' },
+  },
   {
     path: 'test-page',
     component: FirstComponentComponent,
