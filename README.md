@@ -44,3 +44,13 @@
 ##### to edit product(not at all implemented) and add new one
 ##### FINISHED ALL points FROM TASK 5.Routing section
 -------------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------------
+#### 02/12/2020
+
+##### Added json-server for app setting and app features
+##### Updated all services with http client(cart - promise, products/orders - observable)
+##### Added http interceptor for cartData requests
+##### Added loading app setting at app.component
+##### FINISHED ALL points FROM TASK 6.HTTP client
+-------------------------------------------------------------------------------------------------------------------------------

@@ -16,7 +16,11 @@ export class ProductEditResolveGuard implements Resolve<ProductModel> {
     private productService: ProductsService,
   ) { }
 
-  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): ProductModel | Observable<ProductModel> | Promise<ProductModel> | null {
+  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot)
+    : ProductModel
+    | Observable<ProductModel>
+    | Promise<ProductModel>
+    | null {
     const productID = route.paramMap.get('productID');
 
     return this.productService.getProduct(productID).pipe(
@@ -26,7 +30,7 @@ export class ProductEditResolveGuard implements Resolve<ProductModel> {
           return product;
         } else {
           // absolute path, on refresh -> check login and path equal /login
-          //navigate to add products
+          // navigate to add products
           this.router.navigate(['admin/products/add']);
 
           return null;
@@ -38,6 +42,6 @@ export class ProductEditResolveGuard implements Resolve<ProductModel> {
 
         return of(null);
       })
-    )
+    );
   }
 }

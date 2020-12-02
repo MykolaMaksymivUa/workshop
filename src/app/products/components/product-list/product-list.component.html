@@ -3,7 +3,7 @@
   rowHeight="520px"
   (window:resize)="onResize()"
 >
-  <mat-grid-tile *ngFor="let tile of productService.getProducts() | async">
+  <mat-grid-tile *ngFor="let tile of products$ | async">
     <app-product
       [product]="tile"
       (addToCart)="onAddToCart($event)"

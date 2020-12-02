@@ -1,15 +1,22 @@
 import { InjectionToken } from '@angular/core';
 
-export const CONSTANT_CONFIG = new InjectionToken<Constants>('constant list');
+export const CONSTANT_CONFIG = new InjectionToken<Constants>('constant list', {
+  providedIn: 'any',
+  factory: () => constantsList,
+});
 
 export interface Constants {
-  cartEntriesStorageKey: string;
   productListEndpoint: string;
   cartEntriesEndpoint: string;
+  ordersEndpoint: string;
+  settingsEndpoint: string;
+  settingsStorageKey: string;
 }
 
 export const constantsList: Constants = {
-  cartEntriesStorageKey: 'cartEntries',
-  productListEndpoint: '/products',
-  cartEntriesEndpoint: '/cart/entries',
+  productListEndpoint: 'http://localhost:3000/products',
+  cartEntriesEndpoint: 'http://localhost:3000/cartData',
+  ordersEndpoint: 'http://localhost:3000/orders',
+  settingsEndpoint: 'http://localhost:4000/settings',
+  settingsStorageKey: 'appSettings',
 };

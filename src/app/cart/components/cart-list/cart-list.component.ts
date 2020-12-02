@@ -9,7 +9,6 @@ import { CartEntryModel } from '../../models';
   styleUrls: ['./cart-list.component.css']
 })
 export class CartListComponent implements OnInit {
-  cartEntries: CartEntryModel[];
 
   // @todo move to separate component
   sortingFields = {
@@ -22,10 +21,10 @@ export class CartListComponent implements OnInit {
 
   constructor(
     public cartService: CartService,
-  ) { }
+  ) {
+  }
 
   ngOnInit(): void {
-    this.cartEntries = this.cartService.cartEntries;
   }
 
   onUpdateQuantity(newEntry: { entryID: string, newQTY: number }) {

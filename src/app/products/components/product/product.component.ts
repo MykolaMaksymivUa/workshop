@@ -20,7 +20,6 @@ export class ProductComponent implements OnInit {
   }
 
   onAddToCart(qty: number) {
-    console.log(`${this.product.name} successfully added to your cart!`);
     this.addToCart.emit({ quantity: qty, ...this.product });
   }
 

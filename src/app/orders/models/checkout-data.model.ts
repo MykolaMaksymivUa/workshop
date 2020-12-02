@@ -13,7 +13,7 @@ export class CheckoutModel {
     public cardName: string,
     public cartEntries: CartEntryModel[],
     public orderTotal: number,
-    //optional fields
+    // optional fields
     public addressLine2?: string,
   ) { }
 }

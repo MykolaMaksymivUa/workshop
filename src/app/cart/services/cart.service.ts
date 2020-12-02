@@ -1,7 +1,9 @@
-import { Constants, CONSTANT_CONFIG } from './../../core/shared/constant.config';
 import { Inject, Injectable } from '@angular/core';
-import { CartEntryModel } from './../models/cart-entry.model';
-import { LocalStorageService } from './../../core/services';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
+import { CartEntryModel, CartDataModel } from './../models';
+import { SpinnerService } from './../../core/widgets/spinner/spinner.service';
+import { Constants, CONSTANT_CONFIG } from './../../core/shared/constant.config';
 
 
 @Injectable({
@@ -10,16 +12,17 @@ import { LocalStorageService } from './../../core/services';
 export class CartService {
   private _orderTotal = 0;
   private _totalQuantity = 0;
-  private _cartEntries: CartEntryModel[] = this.storage.getItem(this.constList.cartEntriesStorageKey) || [];
+  private _cartEntries: CartEntryModel[] = [];
 
   constructor(
     @Inject(CONSTANT_CONFIG) private constList: Constants,
-    private storage: LocalStorageService
+    private http: HttpClient,
+    private spinner: SpinnerService,
   ) {
-    this.updateCartData();
+    this.fetchCartData();
   }
 
-  get cartEntries() {
+  get cartEntries(): CartEntryModel[] {
     return this._cartEntries;
   }
 
@@ -31,33 +34,13 @@ export class CartService {
     return this._totalQuantity;
   }
 
-  private updateCartData() {
-    this._orderTotal = 0;
-    this._totalQuantity = 0;
-
-    this._cartEntries.forEach((entry: CartEntryModel) => {
-      this._totalQuantity += entry.quantity;
-      this._orderTotal += entry.totalPrice;
-    });
-
-    this.saveToSession();
-  }
-
-  private saveToSession() {
-    this.storage.setItem(this.constList.cartEntriesStorageKey, this._cartEntries);
-  }
-
-  private getEntryIndex(id: string): number {
-    return this._cartEntries.findIndex(elem => elem.productSKU === id);
-  }
-
   isEmptyCart(): boolean {
     return this._cartEntries.length === 0;
   }
 
   addToCart(product: CartEntryModel) {
     const existInCart = this._cartEntries.some(currentEntry => {
-      if (currentEntry.productSKU === product.productSKU) {
+      if (currentEntry.id === product.id) {
         currentEntry.quantity = product.quantity + currentEntry.quantity;
         currentEntry.totalPrice = currentEntry.quantity * currentEntry.price;
 
@@ -83,7 +66,6 @@ export class CartService {
 
       this.updateCartData();
     }
-
   }
 
   deleteEntry(entryID: string) {
@@ -95,5 +77,53 @@ export class CartService {
   removeAllProducts() {
     this._cartEntries.length = 0;
     this.updateCartData();
+  }
+
+  private fetchCartData() {
+    this.spinner.show();
+    this.http.get<CartDataModel>(this.constList.cartEntriesEndpoint)
+      .toPromise()
+      .then((response: CartDataModel) => {
+        this._orderTotal = response.orderTotal;
+        this._totalQuantity = response.totalQuantity;
+        this._cartEntries = response.entries;
+      })
+      .finally(() => this.spinner.hide())
+      .catch(this.handleError);
+  }
+
+  private recalculateOrderData() {
+    this._orderTotal = 0;
+    this._totalQuantity = 0;
+
+    this._cartEntries.forEach((entry: CartEntryModel) => {
+      this._totalQuantity += entry.quantity;
+      this._orderTotal += entry.totalPrice;
+    });
+  }
+
+  private updateCartData() {
+    this.recalculateOrderData();
+
+    const cartData: CartDataModel = {
+      orderTotal: this._orderTotal,
+      totalQuantity: this._totalQuantity,
+      entries: this._cartEntries,
+    };
+    const ops = {
+      headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+    };
+    this.http.post(this.constList.cartEntriesEndpoint, JSON.stringify(cartData), ops)
+      .toPromise()
+      .catch(this.handleError);
+  }
+
+  private getEntryIndex(id: string): number {
+    return this._cartEntries.findIndex(elem => elem.id === id);
+  }
+
+  private handleError(error: any): Promise<any> {
+    console.error('An error occurred', error);
+    return Promise.reject(error.message || error);
   }
 }

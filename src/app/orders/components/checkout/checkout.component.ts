@@ -11,7 +11,8 @@ import { OrdersService } from '../../services';
   styleUrls: ['./checkout.component.css']
 })
 export class CheckoutComponent implements OnInit {
-  checkoutData: CheckoutModel = new CheckoutModel('', '', '', '', '', '', false, 'Credit Card', '', this.cartService.cartEntries, this.cartService.orderTotal);
+  checkoutData: CheckoutModel
+    = new CheckoutModel('', '', '', '', '', '', false, 'Credit Card', '', this.cartService.cartEntries, this.cartService.orderTotal);
 
   constructor(
     public cartService: CartService,
@@ -23,8 +24,11 @@ export class CheckoutComponent implements OnInit {
   }
 
   onSaveCheckoutForm(e) {
-    this.ordersService.submitOrder(this.checkoutData);
-    //on success
-    this.router.navigate(['/cart']);
+    this.ordersService.submitOrder(this.checkoutData).subscribe(
+      () => {
+        this.cartService.removeAllProducts();
+        this.router.navigate(['/cart']);
+      }
+    );
   }
 }

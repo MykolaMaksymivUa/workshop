@@ -4,7 +4,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from '../core/guards';
 import { ProductEditResolveGuard } from './guards';
 import { AdminComponent } from './admin.component';
-import { AdminDashboardComponent, ManageOrdersComponent, ManageProductsComponent, ProductsFormComponent, ProductAddComponent, ProductEditComponent } from './components';
+import {
+  AdminDashboardComponent,
+  ManageOrdersComponent,
+  ManageProductsComponent,
+  ProductsFormComponent,
+  ProductAddComponent,
+  ProductEditComponent
+} from './components';
 
 const routes: Routes = [
   {

@@ -39,7 +39,7 @@
 
       <app-cart-entry
         *ngFor="
-          let product of cartEntries
+          let product of cartService.cartEntries
             | orderBy: selectedSortField:!ascendingSortingCheckbox.checked
         "
         [cartEntry]="product"

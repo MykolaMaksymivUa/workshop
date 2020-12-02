@@ -10,7 +10,7 @@
       <a
         class="list-group-item list-group-item-action"
         *ngFor="let product of productsService.getProducts() | async"
-        [routerLink]="['./edit/' + product.productSKU]"
+        [routerLink]="['./edit/' + product.id]"
       >
         {{ product.name }}
       </a>

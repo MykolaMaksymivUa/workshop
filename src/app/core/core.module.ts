@@ -29,7 +29,7 @@ const configValue: Config = {
   ],
   providers: [
     { provide: configToken, useValue: configValue },
-    { provide: CONSTANT_CONFIG, useValue: constantsList },
+    // { provide: CONSTANT_CONFIG, useValue: constantsList },
   ],
   exports: [
     HeaderComponent,

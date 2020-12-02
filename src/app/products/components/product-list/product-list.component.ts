@@ -1,8 +1,10 @@
+import { Observable } from 'rxjs';
 import { CartEntryModel } from './../../../cart/models/cart-entry.model';
 import { Component, OnInit } from '@angular/core';
 
 import { ProductsService } from '../../services';
 import { CartService } from './../../../cart/services/cart.service';
+import { ProductModel } from '../../models';
 
 @Component({
   selector: 'app-product-list',
@@ -10,7 +12,8 @@ import { CartService } from './../../../cart/services/cart.service';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
-  breakpoint: number = 4;
+  breakpoint = 4;
+  products$: Observable<ProductModel[]>;
 
   constructor(
     public productService: ProductsService,
@@ -19,6 +22,7 @@ export class ProductListComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.products$ = this.productService.getProducts();
     this.onResize();
   }
 

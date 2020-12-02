@@ -1,0 +1,314 @@
+{
+  "products": [
+    {
+      "id": "12344_1",
+      "name": "Perfect Empowered Drinking Water",
+      "description": "A refreshing drinking water infused with MBO®*, a proprietary process that stabilizes oxygen in the water.",
+      "price": 48,
+      "imageSrc": "https://www.amway.com/medias/A8903-en-US-690px-01?context=bWFzdGVyfGltYWdlc3w3MTI0MnxpbWFnZS9qcGVnfGltYWdlcy9oZGMvaGZkLzg4MzgzMDc4MDcyNjIuanBnfDcwMGRkODc3MGRkMDRhYmYzNzM2OTAzODk1ZDQxNDY3M2FlMjBkYWZkOTdiYzNmZDEwNjJkNDY0OTdiYTQyNzg",
+      "categoryType": "Sport",
+      "isAvailable": true
+    },
+    {
+      "id": "12523",
+      "name": "Artistry™ Brush Set",
+      "description": "Artistry Studio™ Glittering Body Jelly feels cool and refreshing to your skin on contact.",
+      "price": 13.8,
+      "imageSrc": "https://www.amway.com/medias/110858-en-US-480px-01?context=bWFzdGVyfHJvb3R8MzM3MDh8aW1hZ2UvanBlZ3xoZWMvaDg4Lzg4NTQwMjQxOTIwMzAuanBnfGRjM2IzYjI5MzM4YzY2MzA2NzU5NDljOWRlZWVhNjA4YzYxZjM2MmMyNDMwZTRjYzA1NDkyYzAzY2JiN2ZkYmI",
+      "categoryType": "Body Key",
+      "isAvailable": true
+    },
+    {
+      "id": "16544_6",
+      "name": "Artistry Signature Color™ Lipstick - Primrose",
+      "description": "Artistry Studio™ Glittering Body Jelly feels cool and refreshing to your skin on contact. .",
+      "price": 233.34,
+      "imageSrc": "https://www.amway.com/medias/123859V-en-US-480px-01?context=bWFzdGVyfGltYWdlc3wzNTM4NXxpbWFnZS9qcGVnfGltYWdlcy9oNjEvaGZmLzg5MjA4Mzc1NTQyMDYuanBnfDFhMTQ5ZDcyMWYzOWMyODQwMjFlYzRiNzY5MTM4MzI0OTIzNTU4NGU1ZjgwNmQ0OGMwOGFlN2U3NTVkZTc0NDY",
+      "categoryType": "Empty",
+      "isAvailable": false
+    },
+    {
+      "id": "1234554_3",
+      "name": "Perfect Empowered Drinking Water",
+      "description": "A refreshing drinking water infused with MBO®*, a proprietary process that stabilizes oxygen in the water.",
+      "price": 25,
+      "imageSrc": "https://www.amway.com/medias/115389D-en-US-480px-01?context=bWFzdGVyfGltYWdlc3wyNDk0NXxpbWFnZS9qcGVnfGltYWdlcy9oYmIvaDc1Lzg4MzgxNTgzODUxODIuanBnfDA2MDU5ZjA1Y2JiOTI3NTAyNzVjODVlNjZkZjAwOTNkOTM3ZGE1MTYxYjQzOGY1ODQwM2ZlNmJkMWE2NzQ1NzU",
+      "categoryType": "Sport",
+      "isAvailable": true
+    },
+    {
+      "id": "12523",
+      "name": "Artistry Studio™ Glittering Body Jelly",
+      "description": "Artistry Studio™ Glittering Body Jelly feels cool and refreshing to your skin on contact.",
+      "price": 13.8,
+      "imageSrc": "https://www.amway.com/medias/123858V-en-US-480px-01?context=bWFzdGVyfGltYWdlc3wyOTczNHxpbWFnZS9qcGVnfGltYWdlcy9oYWMvaGYwLzg5MjA4Mzk4MTUxOTguanBnfDgwMDFkNzA3NmNhOWU1ZWU4MTc1YWIyOGZlOTIwNjY0OTBkNDU3ZmY2OTIwY2Y2ZDNiNjQ2NGNkYmY1NjZjYjc",
+      "categoryType": "Empty",
+      "isAvailable": false
+    },
+    {
+      "id": "1234234_2",
+      "name": "Perfect Empowered Drinking Water",
+      "description": "A refreshing drinking water infused with MBO®*, a proprietary process that stabilizes oxygen in the water.",
+      "price": 48,
+      "imageSrc": "https://www.amway.com/medias/100332-en-US-480px-01?context=bWFzdGVyfGltYWdlc3wzNTc4MHxpbWFnZS9qcGVnfGltYWdlcy9oMWMvaGFlLzg4MzgwMzkxNzUxOTguanBnfDhlODg3MGEzY2IyODI5YzZmODU4OGQ0OGMzOTAzZDc1MDZkY2UzNWE2M2YwMTAwNWQxZTJkYWI2Yzk5ZTkwNTQ",
+      "categoryType": "Sport",
+      "isAvailable": true
+    },
+    {
+      "id": "16544_1",
+      "name": "Nutrilite™ Digestive Enzyme",
+      "description": "Artistry Studio™ Glittering Body Jelly feels cool and refreshing to your skin on contact. .",
+      "price": 13.8,
+      "imageSrc": "https://www.amway.com/medias/A8903-en-US-690px-01?context=bWFzdGVyfGltYWdlc3w3MTI0MnxpbWFnZS9qcGVnfGltYWdlcy9oZGMvaGZkLzg4MzgzMDc4MDcyNjIuanBnfDcwMGRkODc3MGRkMDRhYmYzNzM2OTAzODk1ZDQxNDY3M2FlMjBkYWZkOTdiYzNmZDEwNjJkNDY0OTdiYTQyNzg",
+      "categoryType": "Empty",
+      "isAvailable": false
+    },
+    {
+      "id": "16234",
+      "name": "Artistry Hydra-V™ Replenishing Moisture Cream (for Dry Skin)",
+      "description": "UPPORT NORMAL DIGESTION OF CARBS, PROTEIN, FAT AND DAIRY† – on.†.",
+      "price": 56.86,
+      "imageSrc": "https://www.amway.com/medias/117646V-en-US-480px-01?context=bWFzdGVyfGltYWdlc3wzMzAwNHxpbWFnZS9qcGVnfGltYWdlcy9oMzIvaDRiLzg4MzgxOTE4NzQwNzguanBnfDljOWJiMzZiNWEwMjNhYjA1Y2FkODcxZjI5YzE3N2MwNzNiYWYxYzM3ZjZhODA5NmZkMzZiYTg4NzU2MThhMTU",
+      "categoryType": "Empty",
+      "isAvailable": false
+    },
+    {
+      "id": "12344_1",
+      "name": "Perfect Empowered Drinking Water",
+      "description": "A refreshing drinking water infused with MBO®*, a proprietary process that stabilizes oxygen in the water.",
+      "price": 48,
+      "imageSrc": "https://www.amway.com/medias/A8903-en-US-690px-01?context=bWFzdGVyfGltYWdlc3w3MTI0MnxpbWFnZS9qcGVnfGltYWdlcy9oZGMvaGZkLzg4MzgzMDc4MDcyNjIuanBnfDcwMGRkODc3MGRkMDRhYmYzNzM2OTAzODk1ZDQxNDY3M2FlMjBkYWZkOTdiYzNmZDEwNjJkNDY0OTdiYTQyNzg",
+      "categoryType": "Sport",
+      "isAvailable": true
+    },
+    {
+      "id": "12523",
+      "name": "Artistry™ Brush Set",
+      "description": "Artistry Studio™ Glittering Body Jelly feels cool and refreshing to your skin on contact.",
+      "price": 13.8,
+      "imageSrc": "https://www.amway.com/medias/110858-en-US-480px-01?context=bWFzdGVyfHJvb3R8MzM3MDh8aW1hZ2UvanBlZ3xoZWMvaDg4Lzg4NTQwMjQxOTIwMzAuanBnfGRjM2IzYjI5MzM4YzY2MzA2NzU5NDljOWRlZWVhNjA4YzYxZjM2MmMyNDMwZTRjYzA1NDkyYzAzY2JiN2ZkYmI",
+      "categoryType": "Body Key",
+      "isAvailable": true
+    },
+    {
+      "id": "123223_2",
+      "name": "Artistry™ Advanced Creamy Foam Cleanser",
+      "description": "A refreshing drinking water infused with MBO®*, a proprietary process that stabilizes oxygen in the water.",
+      "price": 48,
+      "imageSrc": "https://www.amway.com/medias/116065V-en-US-480px-01?context=bWFzdGVyfGltYWdlc3wxODIyMXxpbWFnZS9qcGVnfGltYWdlcy9oNWIvaDY5Lzg4MzgxNjcxOTk3NzQuanBnfDYzNjg5ODdiMDU4NjdkMzExYjhmMjg2MWIwNGVmNjQzZTE5MTI2MDE2YzBhMjZhODFlYTA5MDk3M2FjM2I0OTQ",
+      "categoryType": "Sport",
+      "isAvailable": true
+    },
+    {
+      "id": "16544_6",
+      "name": "Artistry Signature Color™ Lipstick - Primrose",
+      "description": "Artistry Studio™ Glittering Body Jelly feels cool and refreshing to your skin on contact. .",
+      "price": 233.34,
+      "imageSrc": "https://www.amway.com/medias/123859V-en-US-480px-01?context=bWFzdGVyfGltYWdlc3wzNTM4NXxpbWFnZS9qcGVnfGltYWdlcy9oNjEvaGZmLzg5MjA4Mzc1NTQyMDYuanBnfDFhMTQ5ZDcyMWYzOWMyODQwMjFlYzRiNzY5MTM4MzI0OTIzNTU4NGU1ZjgwNmQ0OGMwOGFlN2U3NTVkZTc0NDY",
+      "categoryType": "Empty",
+      "isAvailable": false
+    },
+    {
+      "id": "1234554_3",
+      "name": "Perfect Empowered Drinking Water",
+      "description": "A refreshing drinking water infused with MBO®*, a proprietary process that stabilizes oxygen in the water.",
+      "price": 25,
+      "imageSrc": "https://www.amway.com/medias/115389D-en-US-480px-01?context=bWFzdGVyfGltYWdlc3wyNDk0NXxpbWFnZS9qcGVnfGltYWdlcy9oYmIvaDc1Lzg4MzgxNTgzODUxODIuanBnfDA2MDU5ZjA1Y2JiOTI3NTAyNzVjODVlNjZkZjAwOTNkOTM3ZGE1MTYxYjQzOGY1ODQwM2ZlNmJkMWE2NzQ1NzU",
+      "categoryType": "Sport",
+      "isAvailable": true
+    },
+    {
+      "id": "12523",
+      "name": "Artistry Studio™ Glittering Body Jelly",
+      "description": "Artistry Studio™ Glittering Body Jelly feels cool and refreshing to your skin on contact.",
+      "price": 13.8,
+      "imageSrc": "https://www.amway.com/medias/123858V-en-US-480px-01?context=bWFzdGVyfGltYWdlc3wyOTczNHxpbWFnZS9qcGVnfGltYWdlcy9oYWMvaGYwLzg5MjA4Mzk4MTUxOTguanBnfDgwMDFkNzA3NmNhOWU1ZWU4MTc1YWIyOGZlOTIwNjY0OTBkNDU3ZmY2OTIwY2Y2ZDNiNjQ2NGNkYmY1NjZjYjc",
+      "categoryType": "Empty",
+      "isAvailable": false
+    },
+    {
+      "id": "1234234_2",
+      "name": "Perfect Empowered Drinking Water",
+      "description": "A refreshing drinking water infused with MBO®*, a proprietary process that stabilizes oxygen in the water.",
+      "price": 48,
+      "imageSrc": "https://www.amway.com/medias/100332-en-US-480px-01?context=bWFzdGVyfGltYWdlc3wzNTc4MHxpbWFnZS9qcGVnfGltYWdlcy9oMWMvaGFlLzg4MzgwMzkxNzUxOTguanBnfDhlODg3MGEzY2IyODI5YzZmODU4OGQ0OGMzOTAzZDc1MDZkY2UzNWE2M2YwMTAwNWQxZTJkYWI2Yzk5ZTkwNTQ",
+      "categoryType": "Sport",
+      "isAvailable": true
+    },
+    {
+      "id": "16544_1",
+      "name": "Nutrilite™ Digestive Enzyme",
+      "description": "Artistry Studio™ Glittering Body Jelly feels cool and refreshing to your skin on contact. .",
+      "price": 13.8,
+      "imageSrc": "https://www.amway.com/medias/A8903-en-US-690px-01?context=bWFzdGVyfGltYWdlc3w3MTI0MnxpbWFnZS9qcGVnfGltYWdlcy9oZGMvaGZkLzg4MzgzMDc4MDcyNjIuanBnfDcwMGRkODc3MGRkMDRhYmYzNzM2OTAzODk1ZDQxNDY3M2FlMjBkYWZkOTdiYzNmZDEwNjJkNDY0OTdiYTQyNzg",
+      "categoryType": "Empty",
+      "isAvailable": false
+    },
+    {
+      "id": "16234",
+      "name": "Artistry Hydra-V™ Replenishing Moisture Cream (for Dry Skin)",
+      "description": "UPPORT NORMAL DIGESTION OF CARBS, PROTEIN, FAT AND DAIRY† – on.†.",
+      "price": 56.86,
+      "imageSrc": "https://www.amway.com/medias/117646V-en-US-480px-01?context=bWFzdGVyfGltYWdlc3wzMzAwNHxpbWFnZS9qcGVnfGltYWdlcy9oMzIvaDRiLzg4MzgxOTE4NzQwNzguanBnfDljOWJiMzZiNWEwMjNhYjA1Y2FkODcxZjI5YzE3N2MwNzNiYWYxYzM3ZjZhODA5NmZkMzZiYTg4NzU2MThhMTU",
+      "categoryType": "Empty",
+      "isAvailable": false
+    },
+    {
+      "id": "16242334",
+      "name": "Artistry Studio™ Glow Boss Cleanser + Exfoliator",
+      "description": "UPPORT NORMAL DIGESTION OF CARBS, PROTEIN, FAT AND DAIRY† – on.†.",
+      "price": 56.86,
+      "imageSrc": "https://www.amway.com/medias/124812-en-US-480px-01?context=bWFzdGVyfGltYWdlc3wxOTU3N3xpbWFnZS9qcGVnfGltYWdlcy9oZDIvaDFkLzg4OTc2NTI3NTI0MTQuanBnfDlkMjI1OTA1OWQ1ZmRkNzRjNzYyYWQ2MmJjNjYzNWY3YzM2MzhkNWFmZDkyOWI2MDllNDNiOWY2YTY4NzRkNTQ",
+      "categoryType": "Empty",
+      "isAvailable": false
+    }
+  ],
+  "cartData": {
+    "orderTotal": 0,
+    "totalQuantity": 0,
+    "entries": []
+  },
+  "orders": [
+    {
+      "firstName": "Mykola",
+      "lastName": "Maksymiv",
+      "email": "masyanyanooo@gmail.com",
+      "addressLine1": "Л,",
+      "country": "Ukraine",
+      "zip": "79012",
+      "isShippingAddressSame": false,
+      "paymentMethod": "Credit Card",
+      "cardName": "",
+      "cartEntries": [
+        {
+          "quantity": 5,
+          "id": "12523",
+          "name": "Artistry™ Brush Set",
+          "description": "Artistry Studio™ Glittering Body Jelly feels cool and refreshing to your skin on contact.",
+          "price": 13.8,
+          "imageSrc": "https://www.amway.com/medias/110858-en-US-480px-01?context=bWFzdGVyfHJvb3R8MzM3MDh8aW1hZ2UvanBlZ3xoZWMvaDg4Lzg4NTQwMjQxOTIwMzAuanBnfGRjM2IzYjI5MzM4YzY2MzA2NzU5NDljOWRlZWVhNjA4YzYxZjM2MmMyNDMwZTRjYzA1NDkyYzAzY2JiN2ZkYmI",
+          "categoryType": "Body Key",
+          "isAvailable": true,
+          "totalPrice": 69
+        },
+        {
+          "quantity": 3,
+          "id": "1234554_3",
+          "name": "Perfect Empowered Drinking Water",
+          "description": "A refreshing drinking water infused with MBO®*, a proprietary process that stabilizes oxygen in the water.",
+          "price": 25,
+          "imageSrc": "https://www.amway.com/medias/115389D-en-US-480px-01?context=bWFzdGVyfGltYWdlc3wyNDk0NXxpbWFnZS9qcGVnfGltYWdlcy9oYmIvaDc1Lzg4MzgxNTgzODUxODIuanBnfDA2MDU5ZjA1Y2JiOTI3NTAyNzVjODVlNjZkZjAwOTNkOTM3ZGE1MTYxYjQzOGY1ODQwM2ZlNmJkMWE2NzQ1NzU",
+          "categoryType": "Sport",
+          "isAvailable": true,
+          "totalPrice": 75
+        },
+        {
+          "quantity": 1,
+          "id": "123223_2",
+          "name": "Artistry™ Advanced Creamy Foam Cleanser",
+          "description": "A refreshing drinking water infused with MBO®*, a proprietary process that stabilizes oxygen in the water.",
+          "price": 48,
+          "imageSrc": "https://www.amway.com/medias/116065V-en-US-480px-01?context=bWFzdGVyfGltYWdlc3wxODIyMXxpbWFnZS9qcGVnfGltYWdlcy9oNWIvaDY5Lzg4MzgxNjcxOTk3NzQuanBnfDYzNjg5ODdiMDU4NjdkMzExYjhmMjg2MWIwNGVmNjQzZTE5MTI2MDE2YzBhMjZhODFlYTA5MDk3M2FjM2I0OTQ",
+          "categoryType": "Sport",
+          "isAvailable": true,
+          "totalPrice": 48
+        }
+      ],
+      "orderTotal": 192,
+      "orderDate": "2020-12-02T17:28:11.028Z",
+      "id": 1
+    },
+    {
+      "firstName": "Mykola213",
+      "lastName": "Maksymiv213",
+      "email": "mao@gmail.com",
+      "addressLine1": "Lviv",
+      "country": "Ukraine",
+      "zip": "79012",
+      "isShippingAddressSame": false,
+      "paymentMethod": "Debit Card",
+      "cardName": "",
+      "cartEntries": [
+        {
+          "quantity": 12,
+          "id": "12344_1",
+          "name": "Perfect Empowered Drinking Water",
+          "description": "A refreshing drinking water infused with MBO®*, a proprietary process that stabilizes oxygen in the water.",
+          "price": 48,
+          "imageSrc": "https://www.amway.com/medias/A8903-en-US-690px-01?context=bWFzdGVyfGltYWdlc3w3MTI0MnxpbWFnZS9qcGVnfGltYWdlcy9oZGMvaGZkLzg4MzgzMDc4MDcyNjIuanBnfDcwMGRkODc3MGRkMDRhYmYzNzM2OTAzODk1ZDQxNDY3M2FlMjBkYWZkOTdiYzNmZDEwNjJkNDY0OTdiYTQyNzg",
+          "categoryType": "Sport",
+          "isAvailable": true,
+          "totalPrice": 576
+        },
+        {
+          "quantity": 9,
+          "id": "12523",
+          "name": "Artistry™ Brush Set",
+          "description": "Artistry Studio™ Glittering Body Jelly feels cool and refreshing to your skin on contact.",
+          "price": 13.8,
+          "imageSrc": "https://www.amway.com/medias/110858-en-US-480px-01?context=bWFzdGVyfHJvb3R8MzM3MDh8aW1hZ2UvanBlZ3xoZWMvaDg4Lzg4NTQwMjQxOTIwMzAuanBnfGRjM2IzYjI5MzM4YzY2MzA2NzU5NDljOWRlZWVhNjA4YzYxZjM2MmMyNDMwZTRjYzA1NDkyYzAzY2JiN2ZkYmI",
+          "categoryType": "Body Key",
+          "isAvailable": true,
+          "totalPrice": 124.2
+        }
+      ],
+      "orderTotal": 700.2,
+      "orderDate": "2020-12-02T17:40:58.675Z",
+      "id": 2
+    },
+    {
+      "firstName": "Andre",
+      "lastName": "Sapkovskiy",
+      "email": "test@gmail.com",
+      "addressLine1": "",
+      "country": "United States",
+      "zip": "79012",
+      "isShippingAddressSame": false,
+      "paymentMethod": "Pay Pal",
+      "cardName": "",
+      "cartEntries": [
+        {
+          "quantity": 1,
+          "id": "12344_1",
+          "name": "Perfect Empowered Drinking Water",
+          "description": "A refreshing drinking water infused with MBO®*, a proprietary process that stabilizes oxygen in the water.",
+          "price": 48,
+          "imageSrc": "https://www.amway.com/medias/A8903-en-US-690px-01?context=bWFzdGVyfGltYWdlc3w3MTI0MnxpbWFnZS9qcGVnfGltYWdlcy9oZGMvaGZkLzg4MzgzMDc4MDcyNjIuanBnfDcwMGRkODc3MGRkMDRhYmYzNzM2OTAzODk1ZDQxNDY3M2FlMjBkYWZkOTdiYzNmZDEwNjJkNDY0OTdiYTQyNzg",
+          "categoryType": "Sport",
+          "isAvailable": true,
+          "totalPrice": 48
+        }
+      ],
+      "orderTotal": 48,
+      "orderDate": "2020-12-02T20:28:51.430Z",
+      "id": 3
+    },
+    {
+      "firstName": "Mykola",
+      "lastName": "Maksymiv",
+      "email": "",
+      "addressLine1": "",
+      "country": "Ukraine",
+      "zip": "79012",
+      "isShippingAddressSame": false,
+      "paymentMethod": "Pay Pal",
+      "cardName": "",
+      "cartEntries": [
+        {
+          "quantity": 5,
+          "id": "12344_1",
+          "name": "Perfect Empowered Drinking Water",
+          "description": "A refreshing drinking water infused with MBO®*, a proprietary process that stabilizes oxygen in the water.",
+          "price": 48,
+          "imageSrc": "https://www.amway.com/medias/A8903-en-US-690px-01?context=bWFzdGVyfGltYWdlc3w3MTI0MnxpbWFnZS9qcGVnfGltYWdlcy9oZGMvaGZkLzg4MzgzMDc4MDcyNjIuanBnfDcwMGRkODc3MGRkMDRhYmYzNzM2OTAzODk1ZDQxNDY3M2FlMjBkYWZkOTdiYzNmZDEwNjJkNDY0OTdiYTQyNzg",
+          "categoryType": "Sport",
+          "isAvailable": true,
+          "totalPrice": 240
+        }
+      ],
+      "orderTotal": 240,
+      "orderDate": "2020-12-02T20:53:47.230Z",
+      "id": 4
+    }
+  ]
+}

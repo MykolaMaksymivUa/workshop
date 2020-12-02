@@ -1,4 +1,3 @@
-import { element } from 'protractor';
 import { Inject, Injectable } from '@angular/core';
 
 @Injectable({

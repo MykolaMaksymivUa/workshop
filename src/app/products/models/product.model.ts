@@ -1,6 +1,6 @@
 export class ProductModel {
   constructor(
-    public productSKU: string,
+    public id: string,
     public name: string,
     public description: string,
     public price: number,

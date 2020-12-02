@@ -5,7 +5,7 @@
       <mat-panel-title> {{ cartEntry.name }} </mat-panel-title>
     </mat-expansion-panel-header>
     <p>
-      <b>#{{ cartEntry.productSKU }}</b>
+      <b>#{{ cartEntry.id }}</b>
     </p>
     <form class="cart__quantity-form">
       <mat-form-field class="cart__quantity-form-full-width">
@@ -21,7 +21,7 @@
         mat-raised-button
         color="primary"
         type="button"
-        (click)="onUpdateQuantity(cartEntry.productSKU, +entryQty.value)"
+        (click)="onUpdateQuantity(cartEntry.id, +entryQty.value)"
       >
         Save
       </button>
@@ -32,7 +32,7 @@
       mat-raised-button
       color="warn"
       type="button"
-      (click)="onCartEntryDelete(cartEntry.productSKU)"
+      (click)="onCartEntryDelete(cartEntry.id)"
     >
       Delete from cart
     </button>
