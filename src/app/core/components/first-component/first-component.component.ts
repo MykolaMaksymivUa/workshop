@@ -17,6 +17,7 @@ export enum ProductCategories {
   styleUrls: ['./first-component.component.css'],
   providers: [
     GeneratorService,
+    // логично, так как данный токен внедряется в сервис, а значит он должен быть глобально видимый
     // not working, need to provide in module.
     // { provide: configToken, useValue: configValue },
     { provide: generatorFactory10, useFactory: GeneratorFactory(10), deps: [GeneratorService] }
