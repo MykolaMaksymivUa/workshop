@@ -12,6 +12,7 @@ export class ProductComponent implements OnInit {
   @Input() product: ProductModel;
   @Output() addToCart = new EventEmitter<CartEntryModel>();
 
+  // лучше сделать этот компонент презентационным, тоесть без зависимостей.
   constructor(
   ) {
   }

@@ -9,7 +9,7 @@ import { catchError, publish, refCount, retry, share } from 'rxjs/operators';
 
 
 @Injectable({
-  providedIn: 'any'
+  providedIn: 'any' // почему any?
 })
 export class ProductsService {
   private productsURL: string = this.constList.productListEndpoint;
