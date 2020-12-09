@@ -1,5 +1,13 @@
 import { Injectable } from '@angular/core';
-import { HttpEvent, HttpInterceptor, HttpHandler, HttpRequest, HttpResponse, HttpEventType, HttpErrorResponse } from '@angular/common/http';
+import {
+  HttpEvent,
+  HttpInterceptor,
+  HttpHandler,
+  HttpRequest,
+  HttpResponse,
+  HttpEventType,
+  HttpErrorResponse
+} from '@angular/common/http';
 
 import { Observable } from 'rxjs';
 import { filter, map, tap } from 'rxjs/operators';

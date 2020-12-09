@@ -25,10 +25,10 @@ export class AppSettingsService {
   ) { }
 
   loadSettings(): Observable<AppSettingsModel> {
-    const settings = this.ls.getItem(this.config.settingsStorageKey);
+    const appSettings = this.ls.getItem(this.config.settingsStorageKey);
 
-    if (settings) {
-      return of(settings);
+    if (appSettings) {
+      return of(appSettings);
     }
 
     return this.http.get<AppSettingsModel>(this.config.settingsEndpoint).pipe(

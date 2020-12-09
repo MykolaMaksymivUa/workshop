@@ -21,7 +21,7 @@ export class AppComponent implements OnInit {
   }
   ngOnInit(): void {
     this.settingsService.loadSettings()
-      .subscribe((config: AppSettingsModel) => console.log(config))
+      .subscribe((config: AppSettingsModel) => console.log(config));
   }
 
   onActivate(event: any, routerOutlet: RouterOutlet): void {
