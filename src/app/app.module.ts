@@ -14,6 +14,7 @@ import { CartModule } from './cart/cart.module';
 import { CoreModule } from './core/core.module';
 import { OrdersModule } from './orders/orders.module';
 import { SharedModule } from './shared/shared.module';
+import { RootStoreModule } from './core/@ngrx/root-store.module';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { SharedModule } from './shared/shared.module';
     CartModule,
     OrdersModule,
     // AdminModule,
+    RootStoreModule,
     AppRoutingModule,
   ],
   providers: [

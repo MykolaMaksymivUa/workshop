@@ -309,6 +309,55 @@
       "orderTotal": 240,
       "orderDate": "2020-12-02T20:53:47.230Z",
       "id": 4
+    },
+    {
+      "firstName": "Mykola",
+      "lastName": "Maksymiv",
+      "email": "mykolamaksymivua@gmail.com",
+      "addressLine1": "Lviv, Ustiyanovycha, 8",
+      "country": "Ukraine",
+      "zip": "79012",
+      "isShippingAddressSame": false,
+      "paymentMethod": "Debit Card",
+      "cardName": "",
+      "cartEntries": [
+        {
+          "quantity": 2,
+          "id": "12344_1",
+          "name": "Perfect Empowered Drinking Water",
+          "description": "A refreshing drinking water infused with MBO®*, a proprietary process that stabilizes oxygen in the water.",
+          "price": 48,
+          "imageSrc": "https://www.amway.com/medias/A8903-en-US-690px-01?context=bWFzdGVyfGltYWdlc3w3MTI0MnxpbWFnZS9qcGVnfGltYWdlcy9oZGMvaGZkLzg4MzgzMDc4MDcyNjIuanBnfDcwMGRkODc3MGRkMDRhYmYzNzM2OTAzODk1ZDQxNDY3M2FlMjBkYWZkOTdiYzNmZDEwNjJkNDY0OTdiYTQyNzg",
+          "categoryType": "Sport",
+          "isAvailable": true,
+          "totalPrice": 96
+        },
+        {
+          "quantity": 6,
+          "id": "1234234_2",
+          "name": "Perfect Empowered Drinking Water",
+          "description": "A refreshing drinking water infused with MBO®*, a proprietary process that stabilizes oxygen in the water.",
+          "price": 48,
+          "imageSrc": "https://www.amway.com/medias/100332-en-US-480px-01?context=bWFzdGVyfGltYWdlc3wzNTc4MHxpbWFnZS9qcGVnfGltYWdlcy9oMWMvaGFlLzg4MzgwMzkxNzUxOTguanBnfDhlODg3MGEzY2IyODI5YzZmODU4OGQ0OGMzOTAzZDc1MDZkY2UzNWE2M2YwMTAwNWQxZTJkYWI2Yzk5ZTkwNTQ",
+          "categoryType": "Sport",
+          "isAvailable": true,
+          "totalPrice": 288
+        },
+        {
+          "quantity": 12,
+          "id": "12523",
+          "name": "Artistry™ Brush Set",
+          "description": "Artistry Studio™ Glittering Body Jelly feels cool and refreshing to your skin on contact.",
+          "price": 13.8,
+          "imageSrc": "https://www.amway.com/medias/110858-en-US-480px-01?context=bWFzdGVyfHJvb3R8MzM3MDh8aW1hZ2UvanBlZ3xoZWMvaDg4Lzg4NTQwMjQxOTIwMzAuanBnfGRjM2IzYjI5MzM4YzY2MzA2NzU5NDljOWRlZWVhNjA4YzYxZjM2MmMyNDMwZTRjYzA1NDkyYzAzY2JiN2ZkYmI",
+          "categoryType": "Body Key",
+          "isAvailable": true,
+          "totalPrice": 165.60000000000002
+        }
+      ],
+      "orderTotal": 549.6,
+      "orderDate": "2020-12-09T18:29:37.990Z",
+      "id": 5
     }
   ]
 }

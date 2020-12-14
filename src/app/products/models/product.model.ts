@@ -1,4 +1,13 @@
-export class ProductModel {
+export interface Product {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  imageSrc?: string;
+  categoryType?: string;
+  isAvailable?: boolean;
+}
+export class ProductModel implements Product {
   constructor(
     public id: string,
     public name: string,

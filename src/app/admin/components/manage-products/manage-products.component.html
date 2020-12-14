@@ -9,7 +9,7 @@
       <h3>Edit products from list</h3>
       <a
         class="list-group-item list-group-item-action"
-        *ngFor="let product of productsService.getProducts() | async"
+        *ngFor="let product of products$ | async"
         [routerLink]="['./edit/' + product.id]"
       >
         {{ product.name }}

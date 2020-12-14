@@ -6,6 +6,10 @@ import { ProductsService } from '../../services';
 import { CartService } from './../../../cart/services/cart.service';
 import { ProductModel } from '../../models';
 
+import { AppState, ProductsState } from 'src/app/core/@ngrx';
+import { select, Store } from '@ngrx/store';
+import * as ProductsActions from '../../../core/@ngrx/products/products.actions';
+
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
@@ -17,11 +21,14 @@ export class ProductListComponent implements OnInit {
 
   constructor(
     public productService: ProductsService,
-    private cartService: CartService
+    private cartService: CartService,
+    private store: Store<AppState>
   ) {
   }
 
   ngOnInit(): void {
+    this.store.subscribe((data) => console.log(data));
+    // this.store.dispatch(ProductsActions.loadProducts());
     this.products$ = this.productService.getProducts();
     this.onResize();
   }
