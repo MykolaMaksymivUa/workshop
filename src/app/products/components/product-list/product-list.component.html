@@ -10,3 +10,5 @@
     ></app-product>
   </mat-grid-tile>
 </mat-grid-list>
+
+<p *ngIf="productsError$ | async as errorMessage">{{ errorMessage }}</p>

@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { ProductsComponent } from './products.component';
 import { ProductListComponent, ProductDetailsComponent } from './components';
+import { ProductExistsGuard, ProductsStatePreloadingGuard } from './guards';
 
 const routes: Routes = [
   {
@@ -12,10 +13,12 @@ const routes: Routes = [
       {
         path: '',
         component: ProductListComponent,
+        canActivate: [ProductsStatePreloadingGuard]
       },
       {
         path: 'product-details/:productID',
         component: ProductDetailsComponent,
+        canActivate: [ProductExistsGuard]
       }
     ]
   }

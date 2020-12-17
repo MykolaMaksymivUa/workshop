@@ -6,9 +6,8 @@ import { ProductsService } from '../../services';
 import { CartService } from './../../../cart/services/cart.service';
 import { ProductModel } from '../../models';
 
-import { AppState, ProductsState } from 'src/app/core/@ngrx';
+import { AppState, selectProducts, selectProductsError } from 'src/app/core/@ngrx';
 import { select, Store } from '@ngrx/store';
-import * as ProductsActions from '../../../core/@ngrx/products/products.actions';
 
 @Component({
   selector: 'app-product-list',
@@ -18,6 +17,7 @@ import * as ProductsActions from '../../../core/@ngrx/products/products.actions'
 export class ProductListComponent implements OnInit {
   breakpoint = 4;
   products$: Observable<ProductModel[]>;
+  productsError$: Observable<Error | string>;
 
   constructor(
     public productService: ProductsService,
@@ -27,9 +27,8 @@ export class ProductListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.store.subscribe((data) => console.log(data));
-    // this.store.dispatch(ProductsActions.loadProducts());
-    this.products$ = this.productService.getProducts();
+    this.products$ = this.store.pipe(select(selectProducts));
+    this.productsError$ = this.store.pipe(select(selectProductsError));
     this.onResize();
   }
 

@@ -164,9 +164,21 @@
     }
   ],
   "cartData": {
-    "orderTotal": 0,
-    "totalQuantity": 0,
-    "entries": []
+    "orderTotal": 144,
+    "totalQuantity": 3,
+    "entries": [
+      {
+        "quantity": 3,
+        "id": "12344_1",
+        "name": "Perfect Empowered Drinking Water",
+        "description": "A refreshing drinking water infused with MBO®*, a proprietary process that stabilizes oxygen in the water.",
+        "price": 48,
+        "imageSrc": "https://www.amway.com/medias/A8903-en-US-690px-01?context=bWFzdGVyfGltYWdlc3w3MTI0MnxpbWFnZS9qcGVnfGltYWdlcy9oZGMvaGZkLzg4MzgzMDc4MDcyNjIuanBnfDcwMGRkODc3MGRkMDRhYmYzNzM2OTAzODk1ZDQxNDY3M2FlMjBkYWZkOTdiYzNmZDEwNjJkNDY0OTdiYTQyNzg",
+        "categoryType": "Sport",
+        "isAvailable": true,
+        "totalPrice": 144
+      }
+    ]
   },
   "orders": [
     {

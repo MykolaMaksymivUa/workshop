@@ -12,7 +12,7 @@ import { productsReducer, ProductsEffects } from '.';
   imports: [
     CommonModule,
     StoreModule.forFeature('products', productsReducer),
-    // EffectsModule.forFeature([ProductsEffects]),
+    EffectsModule.forFeature([ProductsEffects]),
   ]
 })
-export class UsersStoreModule { }
+export class ProductsStoreModule { }

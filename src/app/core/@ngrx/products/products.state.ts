@@ -1,4 +1,4 @@
-import { Product, ProductModel } from "src/app/products/models";
+import { Product, ProductModel } from 'src/app/products/models';
 
 export interface ProductsState {
   entities: ReadonlyArray<Product>;
@@ -14,4 +14,4 @@ export const initialProductsState: ProductsState = {
   loading: false,
   loaded: false,
   error: null,
-}
+};

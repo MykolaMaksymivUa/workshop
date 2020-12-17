@@ -7,16 +7,34 @@ export const reducer = createReducer(
   initialProductsState,
 
   on(ProductsActions.loadProducts, (state, props) => {
-    console.log('INIT');
-    console.log(props);
     return {
       ...state,
       loading: true
     };
   }),
 
+  on(ProductsActions.loadProductsSuccess, (state, { products }) => {
+    const entities = { ...products };
+
+    return {
+      ...state,
+      loading: false,
+      loaded: true,
+      entities
+    }
+  }),
+
+  on(ProductsActions.loadProductsError, (state, { error }) => {
+    return {
+      ...state,
+      loading: false,
+      loaded: false,
+      error
+    };
+  }),
 
 );
+
 
 export function productsReducer(state: ProductsState | undefined, action: Action) {
   return reducer(state, action);
