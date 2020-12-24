@@ -49,4 +49,4 @@ export const selectProductByUrl = createSelector(
       return of(null);
     }
   }
-)
+);

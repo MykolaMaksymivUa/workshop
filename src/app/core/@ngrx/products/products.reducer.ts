@@ -21,7 +21,7 @@ export const reducer = createReducer(
       loading: false,
       loaded: true,
       entities
-    }
+    };
   }),
 
   on(ProductsActions.loadProductsError, (state, { error }) => {

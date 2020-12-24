@@ -15,14 +15,6 @@ export class ProductsEffects implements OnRunEffects, OnInitEffects {
   ) {
   }
 
-  ngrxOnRunEffects(resolvedEffects$: Observable<EffectNotification>): Observable<EffectNotification> {
-    return resolvedEffects$;
-  }
-
-  ngrxOnInitEffects(): Action {
-    return { type: '[ProductsEffects]: Init' };
-  }
-
   getProducts$: Observable<Action> = createEffect(() => {
     return this.actions$.pipe(
       ofType(ProductActions.loadProducts),
@@ -35,4 +27,12 @@ export class ProductsEffects implements OnRunEffects, OnInitEffects {
       })
     );
   });
+
+  ngrxOnRunEffects(resolvedEffects$: Observable<EffectNotification>): Observable<EffectNotification> {
+    return resolvedEffects$;
+  }
+
+  ngrxOnInitEffects(): Action {
+    return { type: '[ProductsEffects]: Init' };
+  }
 }

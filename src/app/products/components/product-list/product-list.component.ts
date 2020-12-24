@@ -20,7 +20,6 @@ export class ProductListComponent implements OnInit {
   productsError$: Observable<Error | string>;
 
   constructor(
-    public productService: ProductsService,
     private cartService: CartService,
     private store: Store<AppState>
   ) {
