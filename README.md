@@ -63,3 +63,13 @@
 ##### Added preloading strategy guards
 ##### FINISHED ALL points FROM TASK 7.NgRX store
 -------------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------------
+#### 04/01/2021
+
+##### Modified checkout form
+##### Added all required fields
+##### Implemented possibility to add several mobile phones
+##### Added email and firstName validation
+##### FINISHED ALL points FROM TASK 8.Forms
+-------------------------------------------------------------------------------------------------------------------------------

@@ -1,10 +1,5 @@
 <div class="container">
-  <form
-    (ngSubmit)="onSaveCheckoutForm($event)"
-    id="checkout-form"
-    #form="ngForm"
-    class="row"
-  >
+  <div class="row">
     <div class="col-md-4 order-md-2 mb-4">
       <h4 class="d-flex justify-content-between align-items-center mb-3">
         <span class="text-muted">Your cart</span>
@@ -48,232 +43,214 @@
     </div>
     <div class="col-md-8 order-md-1">
       <h4 class="mb-3">Billing address</h4>
-      <form class="needs-validation" novalidate="">
-        <div class="row">
-          <div class="col-md-6 mb-3">
-            <label for="firstName">First name</label>
-            <input
-              type="text"
-              class="form-control"
-              name="firstName"
-              value=""
-              [(ngModel)]="checkoutData.firstName"
-              required
-            />
-            <div class="invalid-feedback">Valid first name is required.</div>
-          </div>
-          <div class="col-md-6 mb-3">
-            <label for="lastName">Last name</label>
-            <input
-              type="text"
-              class="form-control"
-              name="lastName"
-              value=""
-              [(ngModel)]="checkoutData.lastName"
-              required
-            />
-            <div class="invalid-feedback">Valid last name is required.</div>
-          </div>
-        </div>
-
-        <div class="mb-3">
-          <label for="email"
-            >Email <span class="text-muted">(Optional)</span></label
-          >
-          <input
-            type="email"
-            class="form-control"
-            name="email"
-            placeholder="you@example.com"
-            value=""
-            [(ngModel)]="checkoutData.email"
-            required
-          />
-          <div class="invalid-feedback">
-            Please enter a valid email address for shipping updates.
-          </div>
-        </div>
-
-        <div class="mb-3">
-          <label for="address">Address</label>
-          <input
-            type="text"
-            class="form-control"
-            name="addressLine1"
-            placeholder="1234 Main St"
-            required=""
-            [(ngModel)]="checkoutData.addressLine1"
-          />
-          <div class="invalid-feedback">
-            Please enter your shipping address.
-          </div>
-        </div>
-
-        <div class="mb-3">
-          <label for="address2"
-            >Address 2 <span class="text-muted">(Optional)</span></label
-          >
-          <input
-            type="text"
-            class="form-control"
-            id="address2"
-            placeholder="Apartment or suite"
-          />
-        </div>
-
-        <div class="row">
-          <div class="col-md-5 mb-3">
-            <label for="country">Country</label>
-            <select
-              class="custom-select d-block w-100"
-              name="country"
-              [(ngModel)]="checkoutData.country"
+      <form
+        class="form-horizontal"
+        (ngSubmit)="onSaveCheckoutForm()"
+        [formGroup]="checkoutForm"
+      >
+        <fieldset>
+          <div class="row">
+            <div
+              class="col-md-6 mb-3 form-group"
+              [ngClass]="{ 'has-error': errorMessageList.firstName }"
             >
-              <option value="">Choose...</option>
-              <option>United States</option>
-              <option>Ukraine</option>
-            </select>
-            <div class="invalid-feedback">Please select a valid country.</div>
-          </div>
-          <div class="col-md-4 mb-3">
-            <label for="state">State</label>
-            <select class="custom-select d-block w-100" id="state" required="">
-              <option value="">Choose...</option>
-              <option>California</option>
-            </select>
-            <div class="invalid-feedback">Please provide a valid state.</div>
-          </div>
-          <div class="col-md-3 mb-3">
-            <label for="zip">Zip</label>
-            <input
-              type="text"
-              class="form-control"
-              name="zip"
-              placeholder=""
-              required
-              [(ngModel)]="checkoutData.zip"
-            />
-            <div class="invalid-feedback">Zip code required.</div>
-          </div>
-        </div>
-        <hr class="mb-4" />
-        <div class="custom-control custom-checkbox">
-          <input
-            type="checkbox"
-            class="custom-control-input"
-            name="isShippingAddressSame"
-            [(ngModel)]="checkoutData.isShippingAddressSame"
-          />
-          <label class="custom-control-label" for="same-address"
-            >Shipping address is the same as my billing address</label
-          >
-        </div>
-        <div class="custom-control custom-checkbox">
-          <input type="checkbox" class="custom-control-input" id="save-info" />
-          <label class="custom-control-label" for="save-info"
-            >Save this information for next time</label
-          >
-        </div>
-        <hr class="mb-4" />
+              <label for="firstNameId" class="control-label">First name</label>
+              <input
+                class="form-control"
+                id="firstNameId"
+                type="text"
+                placeholder="First Name (required)"
+                formControlName="firstName"
+                (blur)="onBlur($event)"
+              />
 
-        <h4 class="mb-3">Payment</h4>
+              <div class="help-block" *ngIf="errorMessageList.firstName">
+                {{ errorMessageList.firstName }}
+              </div>
+            </div>
 
-        <div class="d-block my-3">
-          <div class="custom-control custom-radio">
-            <input
-              id="credit"
-              name="paymentMethod"
-              type="radio"
-              class="custom-control-input"
-              value="Credit Card"
-              required=""
-              [(ngModel)]="checkoutData.paymentMethod"
-            />
-            <label class="custom-control-label" for="credit">Credit card</label>
+            <div class="col-md-6 mb-3">
+              <label class="control-label" for="lastNameId">Last name</label>
+              <input
+                class="form-control"
+                id="lastNameId"
+                type="text"
+                placeholder="Last Name"
+                formControlName="lastName"
+              />
+            </div>
           </div>
-          <div class="custom-control custom-radio">
+
+          <div
+            class="form-group"
+            [ngClass]="{ 'has-error': errorMessageList.email }"
+          >
+            <label for="emailId" class="control-label"
+              >Email <span class="text-muted">(Required)</span></label
+            >
             <input
-              id="debit"
-              name="paymentMethod"
-              type="radio"
-              class="custom-control-input"
-              value="Debit Card"
-              required
-              [(ngModel)]="checkoutData.paymentMethod"
-            />
-            <label class="custom-control-label" for="debit">Debit card</label>
-          </div>
-          <div class="custom-control custom-radio">
-            <input
-              id="paypal"
-              name="paymentMethod"
-              type="radio"
-              class="custom-control-input"
-              value="Pay Pal"
-              required
-              [(ngModel)]="checkoutData.paymentMethod"
-            />
-            <label class="custom-control-label" for="paypal">PayPal</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6 mb-3">
-            <label for="cc-name">Name on card</label>
-            <input
-              type="text"
               class="form-control"
-              id="cc-name"
-              placeholder=""
-              required
+              id="emailId"
+              type="email"
+              placeholder="youexample@domain.com"
+              formControlName="email"
+              appAsyncEmailValidator
+              (blur)="onBlur($event)"
             />
-            <small class="text-muted">Full name as displayed on card</small>
-            <div class="invalid-feedback">Name on card is required</div>
+
+            <div class="help-block" *ngIf="errorMessageList.email">
+              {{ errorMessageList.email }}
+            </div>
           </div>
-          <div class="col-md-6 mb-3">
-            <label for="cc-number">Credit card number</label>
-            <input
-              type="text"
-              class="form-control"
-              id="cc-number"
-              placeholder=""
-              required
-            />
-            <div class="invalid-feedback">Credit card number is required</div>
+
+          <div formArrayName="phones">
+            <ng-container *ngFor="let phone of phones.controls; let i = index">
+              <div class="form-group" [formGroupName]="i">
+                <div class="d-flex justify-content-between mb-2">
+                  <label
+                    class="control-label col-md-1"
+                    attr.for="{{ 'phoneId' + i }}"
+                    >Phone</label
+                  >
+                  <button
+                    class="btn btn-danger"
+                    *ngIf="i > 0"
+                    (click)="onRemovePhoneField(i)"
+                  >
+                    X
+                  </button>
+
+                  <button
+                    class="btn btn-success"
+                    *ngIf="i === 0"
+                    (click)="onAddNewPhoneField()"
+                  >
+                    Add one more phone
+                  </button>
+                </div>
+
+                <input
+                  class="form-control"
+                  id="{{ 'phoneId' + i }}"
+                  type="tel"
+                  placeholder="Your phone"
+                  formControlName="phone"
+                />
+              </div>
+            </ng-container>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-md-3 mb-3">
-            <label for="cc-expiration">Expiration</label>
-            <input
-              type="text"
-              class="form-control"
-              id="cc-expiration"
-              placeholder=""
-              required
-            />
-            <div class="invalid-feedback">Expiration date required</div>
+
+          <div class="form-group">
+            <div class="col-md-offset-1 col-md-8 checkbox">
+              <label>
+                <input
+                  id="sendProductsId"
+                  type="checkbox"
+                  formControlName="sendProducts"
+                />
+                Send me your products
+              </label>
+            </div>
           </div>
-          <div class="col-md-3 mb-3">
-            <label for="cc-cvv">CVV</label>
-            <input
-              type="text"
-              class="form-control"
-              id="cc-cvv"
-              placeholder=""
-              required
-            />
-            <div class="invalid-feedback">Security code required</div>
+
+          <ng-container *ngIf="checkoutForm.get('sendProducts').value">
+            <div class="mb-3">
+              <label for="addressLine1">Address</label>
+              <input
+                type="text"
+                id="addressLine1Id"
+                class="form-control"
+                formControlName="addressLine1"
+                placeholder="1234 Main St"
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="addressLine2Id"
+                >Address 2 <span class="text-muted">(Optional)</span></label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="addressLine2Id"
+                formControlName="addressLine2"
+                placeholder="Apartment or suite"
+              />
+            </div>
+
+            <div class="row">
+              <div class="col-md-5 mb-3">
+                <label for="country">Country</label>
+                <select
+                  class="custom-select d-block w-100"
+                  formControlName="country"
+                >
+                  <option value="">Select a Country...</option>
+                  <option *ngFor="let country of countries" [value]="country">
+                    {{ country }}
+                  </option>
+                </select>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="cityId">City</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="cityId"
+                  placeholder="City"
+                  formControlName="city"
+                />
+              </div>
+              <div class="col-md-3 mb-3">
+                <label for="zip">Zip</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="zipId"
+                  placeholder="Zip Code"
+                  formControlName="zip"
+                />
+              </div>
+            </div>
+          </ng-container>
+
+          <div class="form-group">
+            <label class="col-md-2 control-label">Payment type</label>
+            <label class="radio-inline mr-4">
+              <input
+                type="radio"
+                id="paymentType1"
+                value="PayPal"
+                formControlName="paymentMethod"
+              />PayPal
+            </label>
+            <label class="radio-inline mr-4">
+              <input
+                type="radio"
+                id="paymentType2"
+                value="Debit Card"
+                formControlName="paymentMethod"
+              />Debit Card
+            </label>
+            <label class="radio-inline mr-4">
+              <input
+                type="radio"
+                id="paymentType3"
+                value="Credit Card"
+                formControlName="paymentMethod"
+              />Credit Card
+            </label>
           </div>
-        </div>
-        <hr class="mb-4" />
-        <button
-          form="checkout-form"
-          class="btn btn-primary btn-lg btn-block"
-          type="submit"
-        >
-          Place an order
-        </button>
+
+          <button
+            class="btn btn-primary btn-lg btn-block"
+            type="submit"
+            [disabled]="checkoutForm.invalid"
+          >
+            Place an order
+          </button>
+        </fieldset>
       </form>
     </div>
-  </form>
+  </div>
 </div>

@@ -8,11 +8,11 @@ export class CheckoutModel {
     public addressLine1: string,
     public country: string,
     public zip: string,
-    public isShippingAddressSame: boolean,
+    public isSendProducts: boolean,
     public paymentMethod: 'PayPal' | 'Debit Card' | 'Credit Card',
-    public cardName: string,
     public cartEntries: CartEntryModel[],
     public orderTotal: number,
+    public phones: Array<{ phone: string }>,
     // optional fields
     public addressLine2?: string,
   ) { }

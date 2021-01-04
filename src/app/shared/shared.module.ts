@@ -1,12 +1,12 @@
 import { MaterialModule } from './material/material.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HighlightDirective, ClickBoldTextDirective } from './directives';
+import { HighlightDirective, ClickBoldTextDirective, AsyncEmailValidatorDirective } from './directives';
 import { OrderByPipe } from './pipes/order-by.pipe';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [HighlightDirective, ClickBoldTextDirective, OrderByPipe],
+  declarations: [HighlightDirective, ClickBoldTextDirective, OrderByPipe, AsyncEmailValidatorDirective],
   imports: [
     CommonModule,
     MaterialModule,
@@ -18,7 +18,8 @@ import { FormsModule } from '@angular/forms';
     MaterialModule,
     HighlightDirective,
     OrderByPipe,
-    ClickBoldTextDirective
+    ClickBoldTextDirective,
+    AsyncEmailValidatorDirective
   ]
 })
 export class SharedModule { }
