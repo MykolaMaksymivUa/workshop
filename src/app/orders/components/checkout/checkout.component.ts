@@ -105,6 +105,7 @@ export class CheckoutComponent implements OnInit {
     }
   }
 
+  // можно создавать не группу, а контрол
   private buildPhoneGroup(): FormGroup {
     return this.fb.group({
       phone: '',
